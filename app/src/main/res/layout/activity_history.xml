@@ -1,13 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:weightSum="100"
     tools:context="com.leothosthoren.moodtracker.HistoryActivity">
 
-    
+    <FrameLayout
+        android:id="@+id/history_activity_frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="14.29"
+        android:background="@color/banana_yellow">
+
+        <TextView
+            android:id="@+id/history_activity_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="date_time"
+            android:textColor="#000000"
+            android:textSize="15sp" />
+
+        <ImageButton
+            android:id="@+id/history_activity_commentBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@color/banana_yellow"
+            android:contentDescription="@string/comment_icon"
+            android:gravity="center"
+            android:padding="10dp"
+            android:src="@mipmap/ic_comment_black_48px" />
+
+    </FrameLayout>
 
 </LinearLayout>
