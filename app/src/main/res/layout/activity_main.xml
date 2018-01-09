@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    android:id="@+id/main_activity_layout_backgound"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/notification_background"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/light_sage"
     tools:context="com.leothosthoren.moodtracker.MainActivity">
 
-
-    <ImageView
+    <ImageButton
         android:id="@+id/main_activity_img"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:contentDescription="@string/smiley_icon"
-        android:src="@mipmap/smiley_happy" />
+        android:background="@null"
+        android:src="@mipmap/smiley_happy"
+        />
 
     <ImageButton
         android:id="@+id/main_activity_comment"
@@ -24,21 +25,19 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-       android:layout_margin="15dp"
-        android:background="@color/light_sage"
-        android:src="@mipmap/ic_note_add_black">
-    </ImageButton>
+        android:layout_margin="15dp"
+        android:background="@null"
+        android:src="@mipmap/ic_note_add_black" />
 
     <ImageButton
         android:id="@+id/main_activity_history"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
         android:layout_margin="15dp"
-        android:background="@color/light_sage"
-        android:src="@mipmap/ic_history_black">
-    </ImageButton>
+        android:background="@null"
+        android:src="@mipmap/ic_history_black" />
 
 </RelativeLayout>
