@@ -3,8 +3,10 @@ package com.leothosthoren.moodtracker;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.view.GestureDetectorCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
@@ -14,15 +16,25 @@ import android.widget.RelativeLayout;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final int SWIPE_MIN_DISTANCE = 240;
-    private static final int SWIPE_MAX_OFF_PATH = 500;
-    private static final int SWIPE_THRESHOLD_VELOCITY = 300;
+    public static final int[][] listImgAndColor = {
+            {R.color.faded_red,
+                    R.color.warm_grey,
+                    R.color.cornflower_blue_65,
+                    R.color.light_sage,
+                    R.color.banana_yellow},
+            {R.drawable.smiley_sad,
+                    R.drawable.smiley_disappointed,
+                    R.drawable.smiley_normal,
+                    R.drawable.smiley_happy,
+                    R.drawable.smiley_super_happy}};
+
+    private GestureDetectorCompat mDetector;
+
+
     private ImageButton mBtnComment;
     private ImageButton mBtnHistory;
     private ImageButton mBtnSmiley;
     private RelativeLayout mRelativeLayout;
-    private GestureDetector gestureDetector;
-
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
@@ -33,11 +45,11 @@ public class MainActivity extends AppCompatActivity {
         mBtnHistory = (ImageButton) findViewById(R.id.main_activity_history);
         mBtnSmiley = (ImageButton) findViewById(R.id.main_activity_img);
         mRelativeLayout = (RelativeLayout) findViewById(R.id.main_activity_layout_backgound);
-
+        mDetector = new GestureDetectorCompat(this, new MyGestureListener());
         /*
-        *@mBtnCommentis a button on the left bottom wich open an AlertDialog on click
-        * */
-
+        *@mBtnComments
+        *A button on the left bottom which open an AlertDialog on click
+        **/
         mBtnComment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -45,16 +57,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        gestureDetector = new GestureDetector(new MyGestureDetector());
-        View mainview = (View) mRelativeLayout;
-
-        // Set the touch listener for the main view to be our custom gesture listener
-        mainview.setOnTouchListener(new View.OnTouchListener() {
-            public boolean onTouch(View v, MotionEvent event) {
-                return gestureDetector.onTouchEvent(event);
-            }
-        });
-
+        /*
+        * @mBtnHistory
+        * A button to the right bottom of the screen
+        * when user click on it, the activity HistoryActivity.java is launched
+        **/
         mBtnHistory.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -62,11 +69,19 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(historyActivity);
             }
         });
+
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        this.mDetector.onTouchEvent(event);
+        return super.onTouchEvent(event);
     }
 
     /*@addComment method
     * Create an alert dialog with text input and two buttons 'Valider' and 'Annuler'
-    * */
+    * The user can write a comment
+    **/
     private void addComment() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
@@ -89,30 +104,19 @@ public class MainActivity extends AppCompatActivity {
                 .show();
     }
 
-    /*@ MyGestureDetector it checks when user swipe the screen*/
-    class MyGestureDetector extends GestureDetector.SimpleOnGestureListener {
+    class MyGestureListener extends GestureDetector.SimpleOnGestureListener {
+        private static final String DEBUG_TAG = "Gestures";
+
         @Override
-        public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
-            if (Math.abs(e1.getX() - e2.getX()) > SWIPE_MAX_OFF_PATH) {
-                return false;
-            }
-            // Up to Down swipe
-            if (e1.getY() - e2.getY() > SWIPE_MIN_DISTANCE && Math.abs(velocityY) > SWIPE_THRESHOLD_VELOCITY) {
-
-                mRelativeLayout.setBackgroundColor(getColor(R.color.light_sage));
-                mBtnSmiley.setImageResource(R.mipmap.smiley_happy);
-
-                // Down to Up swipe
-            } else if (e2.getY() - e1.getY() > SWIPE_MIN_DISTANCE && Math.abs(velocityY) > SWIPE_THRESHOLD_VELOCITY) {
-                mRelativeLayout.setBackgroundColor(getColor(R.color.banana_yellow));
-                mBtnSmiley.setImageResource(R.mipmap.smiley_super_happy);
-            }
-
-            return false;
+        public boolean onDown(MotionEvent event) {
+            Log.d(DEBUG_TAG, "onDown: " + event.toString());
+            return true;
         }
 
         @Override
-        public boolean onDown(MotionEvent e) {
+        public boolean onFling(MotionEvent event1, MotionEvent event2,
+                               float velocityX, float velocityY) {
+            Log.d(DEBUG_TAG, "onFling: " + event1.toString() + event2.toString());
             return true;
         }
     }

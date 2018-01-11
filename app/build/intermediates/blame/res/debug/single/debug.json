@@ -52,6 +52,10 @@
         "source": "C:\\Users\\Leothos Thoren\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\50fbfc8a76a336fa96d6b1f74b2c0892\\res\\drawable-mdpi-v4\\abc_ic_star_black_16dp.png"
     },
     {
+        "merged": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_smiley_happy.png.flat",
+        "source": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\src\\main\\res\\drawable-mdpi\\smiley_happy.png"
+    },
+    {
         "merged": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_smiley_sad.png.flat",
         "source": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\src\\main\\res\\mipmap-hdpi\\smiley_sad.png"
     },
@@ -76,6 +80,10 @@
         "source": "C:\\Users\\Leothos Thoren\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\50fbfc8a76a336fa96d6b1f74b2c0892\\res\\drawable-mdpi-v4\\abc_menu_hardkey_panel_mtrl_mult.9.png"
     },
     {
+        "merged": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_smiley_disappointed.png.flat",
+        "source": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\src\\main\\res\\drawable-xxhdpi\\smiley_disappointed.png"
+    },
+    {
         "merged": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_text_select_handle_left_mtrl_dark.png.flat",
         "source": "C:\\Users\\Leothos Thoren\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\50fbfc8a76a336fa96d6b1f74b2c0892\\res\\drawable-mdpi-v4\\abc_text_select_handle_left_mtrl_dark.png"
     },
@@ -84,12 +92,12 @@
         "source": "C:\\Users\\Leothos Thoren\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\50fbfc8a76a336fa96d6b1f74b2c0892\\res\\layout\\abc_popup_menu_header_item_layout.xml"
     },
     {
-        "merged": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_notification_bg_low_normal.9.png.flat",
-        "source": "C:\\Users\\Leothos Thoren\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\d74cf568f953d74dfaff73ac6fb29eac\\res\\drawable-hdpi-v4\\notification_bg_low_normal.9.png"
-    },
-    {
         "merged": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_action.xml.flat",
         "source": "C:\\Users\\Leothos Thoren\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\d74cf568f953d74dfaff73ac6fb29eac\\res\\layout\\notification_action.xml"
+    },
+    {
+        "merged": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_notification_bg_low_normal.9.png.flat",
+        "source": "C:\\Users\\Leothos Thoren\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\d74cf568f953d74dfaff73ac6fb29eac\\res\\drawable-hdpi-v4\\notification_bg_low_normal.9.png"
     },
     {
         "merged": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_list_selector_disabled_holo_dark.9.png.flat",
@@ -104,8 +112,16 @@
         "source": "C:\\Users\\Leothos Thoren\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\50fbfc8a76a336fa96d6b1f74b2c0892\\res\\drawable-xhdpi-v4\\abc_scrubber_track_mtrl_alpha.9.png"
     },
     {
+        "merged": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_smiley_super_happy.png.flat",
+        "source": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\src\\main\\res\\drawable-mdpi\\smiley_super_happy.png"
+    },
+    {
         "merged": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_tint_btn_checkable.xml.flat",
         "source": "C:\\Users\\Leothos Thoren\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\50fbfc8a76a336fa96d6b1f74b2c0892\\res\\color\\abc_tint_btn_checkable.xml"
+    },
+    {
+        "merged": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_smiley_happy.png.flat",
+        "source": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\src\\main\\res\\drawable-xhdpi\\smiley_happy.png"
     },
     {
         "merged": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_note_add_black.png.flat",
@@ -120,12 +136,20 @@
         "source": "C:\\Users\\Leothos Thoren\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\50fbfc8a76a336fa96d6b1f74b2c0892\\res\\drawable-xhdpi-v4\\abc_ab_share_pack_mtrl_alpha.9.png"
     },
     {
+        "merged": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_smiley_super_happy.png.flat",
+        "source": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\src\\main\\res\\drawable-xhdpi\\smiley_super_happy.png"
+    },
+    {
         "merged": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_note_add_black.png.flat",
         "source": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_note_add_black.png"
     },
     {
         "merged": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_vector_test.xml.flat",
         "source": "C:\\Users\\Leothos Thoren\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\50fbfc8a76a336fa96d6b1f74b2c0892\\res\\drawable\\abc_vector_test.xml"
+    },
+    {
+        "merged": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_smiley_disappointed.png.flat",
+        "source": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\src\\main\\res\\drawable-mdpi\\smiley_disappointed.png"
     },
     {
         "merged": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_notify_panel_notification_icon_bg.png.flat",
@@ -288,6 +312,10 @@
         "source": "C:\\Users\\Leothos Thoren\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\50fbfc8a76a336fa96d6b1f74b2c0892\\res\\anim\\abc_popup_exit.xml"
     },
     {
+        "merged": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_smiley_sad.png.flat",
+        "source": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\src\\main\\res\\drawable-hdpi\\smiley_sad.png"
+    },
+    {
         "merged": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_smiley_happy.png.flat",
         "source": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\src\\main\\res\\mipmap-xhdpi\\smiley_happy.png"
     },
@@ -304,24 +332,28 @@
         "source": "C:\\Users\\Leothos Thoren\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\50fbfc8a76a336fa96d6b1f74b2c0892\\res\\drawable-hdpi-v4\\abc_switch_track_mtrl_alpha.9.png"
     },
     {
-        "merged": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_cab_background_top_mtrl_alpha.9.png.flat",
-        "source": "C:\\Users\\Leothos Thoren\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\50fbfc8a76a336fa96d6b1f74b2c0892\\res\\drawable-xhdpi-v4\\abc_cab_background_top_mtrl_alpha.9.png"
-    },
-    {
-        "merged": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ic_menu_selectall_mtrl_alpha.png.flat",
-        "source": "C:\\Users\\Leothos Thoren\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\50fbfc8a76a336fa96d6b1f74b2c0892\\res\\drawable-xxhdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png"
+        "merged": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_smiley_happy.png.flat",
+        "source": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\src\\main\\res\\mipmap-xxhdpi\\smiley_happy.png"
     },
     {
         "merged": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_ic_menu_paste_mtrl_am_alpha.png.flat",
         "source": "C:\\Users\\Leothos Thoren\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\50fbfc8a76a336fa96d6b1f74b2c0892\\res\\drawable-xxxhdpi-v4\\abc_ic_menu_paste_mtrl_am_alpha.png"
     },
     {
-        "merged": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_smiley_happy.png.flat",
-        "source": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\src\\main\\res\\mipmap-xxhdpi\\smiley_happy.png"
+        "merged": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ic_menu_selectall_mtrl_alpha.png.flat",
+        "source": "C:\\Users\\Leothos Thoren\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\50fbfc8a76a336fa96d6b1f74b2c0892\\res\\drawable-xxhdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png"
+    },
+    {
+        "merged": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_cab_background_top_mtrl_alpha.9.png.flat",
+        "source": "C:\\Users\\Leothos Thoren\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\50fbfc8a76a336fa96d6b1f74b2c0892\\res\\drawable-xhdpi-v4\\abc_cab_background_top_mtrl_alpha.9.png"
     },
     {
         "merged": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_text_select_handle_left_mtrl_dark.png.flat",
         "source": "C:\\Users\\Leothos Thoren\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\50fbfc8a76a336fa96d6b1f74b2c0892\\res\\drawable-xxhdpi-v4\\abc_text_select_handle_left_mtrl_dark.png"
+    },
+    {
+        "merged": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_smiley_normal.png.flat",
+        "source": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\src\\main\\res\\drawable-xhdpi\\smiley_normal.png"
     },
     {
         "merged": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_smiley_sad.png.flat",
@@ -350,6 +382,10 @@
     {
         "merged": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-xxhdpi-v17_abc_spinner_mtrl_am_alpha.9.png.flat",
         "source": "C:\\Users\\Leothos Thoren\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\50fbfc8a76a336fa96d6b1f74b2c0892\\res\\drawable-ldrtl-xxhdpi-v17\\abc_spinner_mtrl_am_alpha.9.png"
+    },
+    {
+        "merged": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_smiley_sad.png.flat",
+        "source": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\src\\main\\res\\drawable-mdpi\\smiley_sad.png"
     },
     {
         "merged": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_smiley_happy.png.flat",
@@ -472,6 +508,10 @@
         "source": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\src\\main\\res\\mipmap-xhdpi\\smiley_disappointed.png"
     },
     {
+        "merged": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_smiley_sad.png.flat",
+        "source": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\src\\main\\res\\drawable-xhdpi\\smiley_sad.png"
+    },
+    {
         "merged": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
         "source": "C:\\Users\\Leothos Thoren\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\50fbfc8a76a336fa96d6b1f74b2c0892\\res\\drawable-xhdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png"
     },
@@ -584,12 +624,20 @@
         "source": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\src\\main\\res\\mipmap-mdpi\\smiley_disappointed.png"
     },
     {
+        "merged": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_smiley_sad.png.flat",
+        "source": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\src\\main\\res\\drawable-xxxhdpi\\smiley_sad.png"
+    },
+    {
         "merged": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_switch_thumb_material.xml.flat",
         "source": "C:\\Users\\Leothos Thoren\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\50fbfc8a76a336fa96d6b1f74b2c0892\\res\\drawable\\abc_switch_thumb_material.xml"
     },
     {
         "merged": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_btn_switch_to_on_mtrl_00001.9.png.flat",
         "source": "C:\\Users\\Leothos Thoren\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\50fbfc8a76a336fa96d6b1f74b2c0892\\res\\drawable-hdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png"
+    },
+    {
+        "merged": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_smiley_normal.png.flat",
+        "source": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\src\\main\\res\\drawable-hdpi\\smiley_normal.png"
     },
     {
         "merged": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-hdpi-v17_abc_ic_menu_cut_mtrl_alpha.png.flat",
@@ -602,6 +650,10 @@
     {
         "merged": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-hdpi-v17_abc_spinner_mtrl_am_alpha.9.png.flat",
         "source": "C:\\Users\\Leothos Thoren\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\50fbfc8a76a336fa96d6b1f74b2c0892\\res\\drawable-ldrtl-hdpi-v17\\abc_spinner_mtrl_am_alpha.9.png"
+    },
+    {
+        "merged": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_smiley_disappointed.png.flat",
+        "source": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\src\\main\\res\\drawable-hdpi\\smiley_disappointed.png"
     },
     {
         "merged": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\res\\merged\\debug\\anim_tooltip_enter.xml.flat",
@@ -620,12 +672,12 @@
         "source": "C:\\Users\\Leothos Thoren\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\d74cf568f953d74dfaff73ac6fb29eac\\res\\layout-v16\\notification_template_custom_big.xml"
     },
     {
-        "merged": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable_notification_bg.xml.flat",
-        "source": "C:\\Users\\Leothos Thoren\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\d74cf568f953d74dfaff73ac6fb29eac\\res\\drawable\\notification_bg.xml"
-    },
-    {
         "merged": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_ic_star_black_48dp.png.flat",
         "source": "C:\\Users\\Leothos Thoren\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\50fbfc8a76a336fa96d6b1f74b2c0892\\res\\drawable-mdpi-v4\\abc_ic_star_black_48dp.png"
+    },
+    {
+        "merged": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable_notification_bg.xml.flat",
+        "source": "C:\\Users\\Leothos Thoren\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\d74cf568f953d74dfaff73ac6fb29eac\\res\\drawable\\notification_bg.xml"
     },
     {
         "merged": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_scrubber_control_to_pressed_mtrl_005.png.flat",
@@ -664,6 +716,10 @@
         "source": "C:\\Users\\Leothos Thoren\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\50fbfc8a76a336fa96d6b1f74b2c0892\\res\\color\\abc_btn_colored_borderless_text_material.xml"
     },
     {
+        "merged": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_smiley_happy.png.flat",
+        "source": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\src\\main\\res\\drawable-hdpi\\smiley_happy.png"
+    },
+    {
         "merged": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_text_select_handle_left_mtrl_light.png.flat",
         "source": "C:\\Users\\Leothos Thoren\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\50fbfc8a76a336fa96d6b1f74b2c0892\\res\\drawable-xhdpi-v4\\abc_text_select_handle_left_mtrl_light.png"
     },
@@ -676,12 +732,12 @@
         "source": "C:\\Users\\Leothos Thoren\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\50fbfc8a76a336fa96d6b1f74b2c0892\\res\\drawable-mdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
-        "merged": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_btn_check_to_on_mtrl_015.png.flat",
-        "source": "C:\\Users\\Leothos Thoren\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\50fbfc8a76a336fa96d6b1f74b2c0892\\res\\drawable-xxhdpi-v4\\abc_btn_check_to_on_mtrl_015.png"
-    },
-    {
         "merged": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_textfield_search_default_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\Leothos Thoren\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\50fbfc8a76a336fa96d6b1f74b2c0892\\res\\drawable-mdpi-v4\\abc_textfield_search_default_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_btn_check_to_on_mtrl_015.png.flat",
+        "source": "C:\\Users\\Leothos Thoren\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\50fbfc8a76a336fa96d6b1f74b2c0892\\res\\drawable-xxhdpi-v4\\abc_btn_check_to_on_mtrl_015.png"
     },
     {
         "merged": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_item_background_holo_light.xml.flat",
@@ -752,6 +808,10 @@
         "source": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\src\\main\\res\\mipmap-xhdpi\\smiley_super_happy.png"
     },
     {
+        "merged": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_smiley_super_happy.png.flat",
+        "source": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\src\\main\\res\\drawable-xxhdpi\\smiley_super_happy.png"
+    },
+    {
         "merged": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\res\\merged\\debug\\anim_abc_slide_out_bottom.xml.flat",
         "source": "C:\\Users\\Leothos Thoren\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\50fbfc8a76a336fa96d6b1f74b2c0892\\res\\anim\\abc_slide_out_bottom.xml"
     },
@@ -792,12 +852,24 @@
         "source": "C:\\Users\\Leothos Thoren\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\50fbfc8a76a336fa96d6b1f74b2c0892\\res\\drawable-xhdpi-v4\\abc_list_divider_mtrl_alpha.9.png"
     },
     {
+        "merged": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_smiley_disappointed.png.flat",
+        "source": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\src\\main\\res\\drawable-xxxhdpi\\smiley_disappointed.png"
+    },
+    {
         "merged": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21_notification_action_background.xml.flat",
         "source": "C:\\Users\\Leothos Thoren\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\d74cf568f953d74dfaff73ac6fb29eac\\res\\drawable-v21\\notification_action_background.xml"
     },
     {
         "merged": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_item_background_holo_dark.xml.flat",
         "source": "C:\\Users\\Leothos Thoren\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\50fbfc8a76a336fa96d6b1f74b2c0892\\res\\drawable\\abc_item_background_holo_dark.xml"
+    },
+    {
+        "merged": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_smiley_happy.png.flat",
+        "source": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\src\\main\\res\\drawable-xxxhdpi\\smiley_happy.png"
+    },
+    {
+        "merged": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_smiley_super_happy.png.flat",
+        "source": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\src\\main\\res\\drawable-hdpi\\smiley_super_happy.png"
     },
     {
         "merged": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_btn_check_to_on_mtrl_015.png.flat",
@@ -916,6 +988,10 @@
         "source": "C:\\Users\\Leothos Thoren\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\50fbfc8a76a336fa96d6b1f74b2c0892\\res\\drawable-hdpi-v4\\abc_text_select_handle_middle_mtrl_light.png"
     },
     {
+        "merged": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_smiley_normal.png.flat",
+        "source": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\src\\main\\res\\drawable-xxxhdpi\\smiley_normal.png"
+    },
+    {
         "merged": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ic_menu_cut_mtrl_alpha.png.flat",
         "source": "C:\\Users\\Leothos Thoren\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\50fbfc8a76a336fa96d6b1f74b2c0892\\res\\drawable-xxhdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png"
     },
@@ -958,6 +1034,10 @@
     {
         "merged": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_expanded_menu_layout.xml.flat",
         "source": "C:\\Users\\Leothos Thoren\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\50fbfc8a76a336fa96d6b1f74b2c0892\\res\\layout\\abc_expanded_menu_layout.xml"
+    },
+    {
+        "merged": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_smiley_normal.png.flat",
+        "source": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\src\\main\\res\\drawable-xxhdpi\\smiley_normal.png"
     },
     {
         "merged": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_textfield_search_activated_mtrl_alpha.9.png.flat",
@@ -1088,6 +1168,10 @@
         "source": "C:\\Users\\Leothos Thoren\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\50fbfc8a76a336fa96d6b1f74b2c0892\\res\\drawable-xxxhdpi-v4\\abc_tab_indicator_mtrl_alpha.9.png"
     },
     {
+        "merged": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_smiley_sad.png.flat",
+        "source": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\src\\main\\res\\drawable-xxhdpi\\smiley_sad.png"
+    },
+    {
         "merged": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_ic_go_search_api_material.xml.flat",
         "source": "C:\\Users\\Leothos Thoren\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\50fbfc8a76a336fa96d6b1f74b2c0892\\res\\drawable\\abc_ic_go_search_api_material.xml"
     },
@@ -1106,6 +1190,10 @@
     {
         "merged": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\res\\merged\\debug\\color-v23_abc_tint_seek_thumb.xml.flat",
         "source": "C:\\Users\\Leothos Thoren\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\50fbfc8a76a336fa96d6b1f74b2c0892\\res\\color-v23\\abc_tint_seek_thumb.xml"
+    },
+    {
+        "merged": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_smiley_normal.png.flat",
+        "source": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\src\\main\\res\\drawable-mdpi\\smiley_normal.png"
     },
     {
         "merged": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_textfield_search_activated_mtrl_alpha.9.png.flat",
@@ -1350,6 +1438,10 @@
     {
         "merged": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_tab_indicator_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\Leothos Thoren\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\50fbfc8a76a336fa96d6b1f74b2c0892\\res\\drawable-hdpi-v4\\abc_tab_indicator_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_smiley_super_happy.png.flat",
+        "source": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\src\\main\\res\\drawable-xxxhdpi\\smiley_super_happy.png"
     },
     {
         "merged": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_list_divider_mtrl_alpha.9.png.flat",
@@ -1628,6 +1720,10 @@
         "source": "C:\\Users\\Leothos Thoren\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\50fbfc8a76a336fa96d6b1f74b2c0892\\res\\drawable-mdpi-v4\\abc_ic_star_black_36dp.png"
     },
     {
+        "merged": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_smiley_happy.png.flat",
+        "source": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\src\\main\\res\\drawable-xxhdpi\\smiley_happy.png"
+    },
+    {
         "merged": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\res\\merged\\debug\\anim_abc_slide_in_bottom.xml.flat",
         "source": "C:\\Users\\Leothos Thoren\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\50fbfc8a76a336fa96d6b1f74b2c0892\\res\\anim\\abc_slide_in_bottom.xml"
     },
@@ -1654,6 +1750,10 @@
     {
         "merged": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_text_select_handle_left_mtrl_light.png.flat",
         "source": "C:\\Users\\Leothos Thoren\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\50fbfc8a76a336fa96d6b1f74b2c0892\\res\\drawable-mdpi-v4\\abc_text_select_handle_left_mtrl_light.png"
+    },
+    {
+        "merged": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_smiley_disappointed.png.flat",
+        "source": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\src\\main\\res\\drawable-xhdpi\\smiley_disappointed.png"
     },
     {
         "merged": "D:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_hint_foreground_material_dark.xml.flat",
