@@ -25,7 +25,7 @@
         android:layout_alignParentStart="true"
         android:layout_margin="15dp"
         android:background="@null"
-        android:src="@mipmap/ic_note_add_black" />
+        android:src="@drawable/ic_note_add_black" />
 
     <ImageButton
         android:id="@+id/main_activity_history"
@@ -36,6 +36,6 @@
         android:layout_alignParentRight="true"
         android:layout_margin="15dp"
         android:background="@null"
-        android:src="@mipmap/ic_history_black" />
+        android:src="@drawable/ic_history_black" />
 
 </RelativeLayout>

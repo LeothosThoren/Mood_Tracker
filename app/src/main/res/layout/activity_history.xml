@@ -34,7 +34,7 @@
             android:contentDescription="@string/comment_icon"
             android:gravity="center"
             android:padding="10dp"
-            android:src="@mipmap/ic_comment_black_48px" />
+            android:src="@drawable/ic_comment_black_48px" />
 
     </FrameLayout>
 

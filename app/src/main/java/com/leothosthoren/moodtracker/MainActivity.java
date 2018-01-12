@@ -2,6 +2,7 @@ package com.leothosthoren.moodtracker;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v4.view.GestureDetectorCompat;
 import android.support.v7.app.AlertDialog;
@@ -16,7 +17,7 @@ import android.widget.RelativeLayout;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static final int[][] listImgAndColor = {
+    public static final int[][] LIST_COLOR_IMG = {
             {R.color.faded_red,
                     R.color.warm_grey,
                     R.color.cornflower_blue_65,
@@ -27,9 +28,11 @@ public class MainActivity extends AppCompatActivity {
                     R.drawable.smiley_normal,
                     R.drawable.smiley_happy,
                     R.drawable.smiley_super_happy}};
-
+    private static final int SWIPE_MIN_DISTANCE = 150;
+    private static final int SWIPE_MAX_OFF_PATH = 250;
+    private static final int SWIPE_THRESHOLD_VELOCITY = 200;
+    private int index = 3;
     private GestureDetectorCompat mDetector;
-
 
     private ImageButton mBtnComment;
     private ImageButton mBtnHistory;
@@ -46,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
         mBtnSmiley = (ImageButton) findViewById(R.id.main_activity_img);
         mRelativeLayout = (RelativeLayout) findViewById(R.id.main_activity_layout_backgound);
         mDetector = new GestureDetectorCompat(this, new MyGestureListener());
+
         /*
         *@mBtnComments
         *A button on the left bottom which open an AlertDialog on click
@@ -117,9 +121,28 @@ public class MainActivity extends AppCompatActivity {
         public boolean onFling(MotionEvent event1, MotionEvent event2,
                                float velocityX, float velocityY) {
             Log.d(DEBUG_TAG, "onFling: " + event1.toString() + event2.toString());
+
+            if (index < LIST_COLOR_IMG[0].length -1 && event1.getY() - event2.getY() > SWIPE_MIN_DISTANCE) {
+                index++;
+                mBtnSmiley.setImageResource(LIST_COLOR_IMG[1][index]);
+                mRelativeLayout.setBackgroundColor(getResources().getColor(LIST_COLOR_IMG[0][index]));
+                getSound(R.raw.smb_coin);
+
+            } else if (index > 0 && event2.getY() - event1.getY() > SWIPE_MIN_DISTANCE) {
+                index--;
+                mBtnSmiley.setImageResource(LIST_COLOR_IMG[1][index]);
+                mRelativeLayout.setBackgroundColor(getResources().getColor(LIST_COLOR_IMG[0][index]));
+                getSound(R.raw.smb_jump);
+
+            } else
+                return false;
+
             return true;
         }
     }
 
-
+    public void getSound(int sound){
+        MediaPlayer mediaPlayer = MediaPlayer.create(MainActivity.this, sound);
+        mediaPlayer.start();
+    }
 }
