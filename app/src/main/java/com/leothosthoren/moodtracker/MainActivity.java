@@ -29,8 +29,8 @@ public class MainActivity extends AppCompatActivity {
                     R.drawable.smiley_happy,
                     R.drawable.smiley_super_happy}};
     private static final int SWIPE_MIN_DISTANCE = 150;
-    private static final int SWIPE_MAX_OFF_PATH = 250;
-    private static final int SWIPE_THRESHOLD_VELOCITY = 200;
+    //    private static final int SWIPE_MAX_OFF_PATH = 250;
+//    private static final int SWIPE_THRESHOLD_VELOCITY = 200;
     private int index = 3;
     private GestureDetectorCompat mDetector;
 
@@ -52,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
 
         /*
         *@mBtnComments
+        *
         *A button on the left bottom which open an AlertDialog on click
         **/
         mBtnComment.setOnClickListener(new View.OnClickListener() {
@@ -63,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
 
         /*
         * @mBtnHistory
+        *
         * A button to the right bottom of the screen
         * when user click on it, the activity HistoryActivity.java is launched
         **/
@@ -83,6 +85,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /*@addComment method
+
     * Create an alert dialog with text input and two buttons 'Valider' and 'Annuler'
     * The user can write a comment
     **/
@@ -108,9 +111,32 @@ public class MainActivity extends AppCompatActivity {
                 .show();
     }
 
+    /*
+    * @getSound method
+    * @sound parameter
+    *
+    * This method allow you to add sound or music in your app using MediaPlayer
+    * */
+    public void getSound(int sound) {
+        MediaPlayer mediaPlayer = MediaPlayer.create(MainActivity.this, sound);
+        mediaPlayer.start();
+    }
+
+
+    /*
+    * Class which manage the swipe gesture
+    * Every time you slide your finger on the screen the background color and the smiley are switching
+    * A sound is perform too. It indicates the user whether it's from the top or from the bottom
+    * */
     class MyGestureListener extends GestureDetector.SimpleOnGestureListener {
         private static final String DEBUG_TAG = "Gestures";
 
+        /*
+        * @onDown method
+        * @MotionEvent parameter
+        *
+        * it is necessary to return true from onDown for the onFling event to register
+        * */
         @Override
         public boolean onDown(MotionEvent event) {
             Log.d(DEBUG_TAG, "onDown: " + event.toString());
@@ -122,27 +148,23 @@ public class MainActivity extends AppCompatActivity {
                                float velocityX, float velocityY) {
             Log.d(DEBUG_TAG, "onFling: " + event1.toString() + event2.toString());
 
-            if (index < LIST_COLOR_IMG[0].length -1 && event1.getY() - event2.getY() > SWIPE_MIN_DISTANCE) {
+            if (index < LIST_COLOR_IMG[0].length - 1 && event1.getY() - event2.getY() > SWIPE_MIN_DISTANCE) {
+                getSound(R.raw.smb_coin);
                 index++;
                 mBtnSmiley.setImageResource(LIST_COLOR_IMG[1][index]);
                 mRelativeLayout.setBackgroundColor(getResources().getColor(LIST_COLOR_IMG[0][index]));
-                getSound(R.raw.smb_coin);
+
 
             } else if (index > 0 && event2.getY() - event1.getY() > SWIPE_MIN_DISTANCE) {
+                getSound(R.raw.smb_jump);
                 index--;
                 mBtnSmiley.setImageResource(LIST_COLOR_IMG[1][index]);
                 mRelativeLayout.setBackgroundColor(getResources().getColor(LIST_COLOR_IMG[0][index]));
-                getSound(R.raw.smb_jump);
 
             } else
                 return false;
 
             return true;
         }
-    }
-
-    public void getSound(int sound){
-        MediaPlayer mediaPlayer = MediaPlayer.create(MainActivity.this, sound);
-        mediaPlayer.start();
     }
 }

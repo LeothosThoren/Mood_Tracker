@@ -2760,8 +2760,8 @@ public final class R {
     public static final int expanded_menu=0x7f070033;
     public static final int forever=0x7f070034;
     public static final int history_activity_commentBtn=0x7f070035;
-    public static final int history_activity_frameLayout=0x7f070036;
-    public static final int history_activity_text=0x7f070037;
+    public static final int history_activity_text=0x7f070036;
+    public static final int history_layout=0x7f070037;
     public static final int home=0x7f070038;
     public static final int homeAsUp=0x7f070039;
     public static final int icon=0x7f07003a;

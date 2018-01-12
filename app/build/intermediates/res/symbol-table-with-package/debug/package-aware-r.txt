@@ -679,8 +679,8 @@ int id expand_activities_button 0x7f070032
 int id expanded_menu 0x7f070033
 int id forever 0x7f070034
 int id history_activity_commentBtn 0x7f070035
-int id history_activity_frameLayout 0x7f070036
-int id history_activity_text 0x7f070037
+int id history_activity_text 0x7f070036
+int id history_layout 0x7f070037
 int id home 0x7f070038
 int id homeAsUp 0x7f070039
 int id icon 0x7f07003a
