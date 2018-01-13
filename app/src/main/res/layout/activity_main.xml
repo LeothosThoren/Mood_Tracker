@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/light_sage"
-    tools:context="com.leothosthoren.moodtracker.MainActivity">
+    tools:context="com.leothosthoren.moodtracker.controler.MainActivity">
 
     <ImageButton
         android:id="@+id/main_activity_img"

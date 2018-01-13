@@ -1,4 +1,4 @@
-package com.leothosthoren.moodtracker;
+package com.leothosthoren.moodtracker.controler;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -14,6 +14,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.RelativeLayout;
+
+import com.leothosthoren.moodtracker.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -99,6 +101,7 @@ public class MainActivity extends AppCompatActivity {
                 .setPositiveButton("Valider", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
+                        //Need to register the comment if user writes one
                         dialog.dismiss();
                     }
                 });
