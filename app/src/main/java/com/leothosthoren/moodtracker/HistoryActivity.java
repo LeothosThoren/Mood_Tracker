@@ -12,30 +12,17 @@ import android.widget.ListView;
 import java.text.DateFormat;
 import java.util.Date;
 
+import static com.leothosthoren.moodtracker.MainActivity.LIST_COLOR_IMG;
+
 public class HistoryActivity extends AppCompatActivity {
 
-    String[] cheeses = {
-            "Parmesan",
-            "Ricotta",
-            "Fontina",
-            "Mozzarella",
-            "Cheddar"
-    };
+    ListView liste;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_history);
 
-        ListView cheeseList = new ListView(this);
 
-        ArrayAdapter<String> cheeseAdapter =
-                new ArrayAdapter<String>(this,
-                        R.layout.activity_history,
-                        R.id.history_layout,
-                        cheeses
-                );
-
-        cheeseList.setAdapter(cheeseAdapter);
     }
 }
