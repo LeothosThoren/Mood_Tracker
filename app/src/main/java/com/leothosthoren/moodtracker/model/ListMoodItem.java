@@ -1,24 +1,22 @@
 package com.leothosthoren.moodtracker.model;
 
-import android.icu.text.SimpleDateFormat;
+import android.widget.ImageButton;
 
 import java.util.Calendar;
-import java.util.Date;
-import java.util.Locale;
 
 
 /**
  * Created by Sofiane M. alias Leothos Thoren on 13/01/2018
  */
-public class ListMoodData {
+public class ListMoodItem {
     private int mColor;
-    private String mComment;
+    private int mBtnComment;
     private Calendar mDate;
 
 
-    public ListMoodData(int color, String comment, Calendar date) {
+    public ListMoodItem(int color, int btnComment, Calendar date) {
         mColor = color;
-        mComment = comment;
+        mBtnComment = btnComment;
         mDate = date;
     }
 
@@ -26,24 +24,11 @@ public class ListMoodData {
         return mColor;
     }
 
-    public void setColor(int color) {
-        mColor = color;
-    }
-
-    public String getComment() {
-        return mComment;
-    }
-
-    public void setComment(String comment) {
-        mComment = comment;
+    public int getBtnComment() {
+        return mBtnComment;
     }
 
     public Calendar getDate() {
         return mDate;
     }
-
-    public void setDate(Calendar date) {
-        mDate = date;
-    }
-
 }
