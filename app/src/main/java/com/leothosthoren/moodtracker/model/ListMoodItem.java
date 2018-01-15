@@ -2,8 +2,10 @@ package com.leothosthoren.moodtracker.model;
 
 import android.icu.text.SimpleDateFormat;
 
+import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
+
 
 /**
  * Created by Sofiane M. alias Leothos Thoren on 13/01/2018
@@ -11,10 +13,10 @@ import java.util.Locale;
 public class ListMoodData {
     private int mColor;
     private String mComment;
-    private Date mDate;
+    private Calendar mDate;
 
 
-    public ListMoodData(int color, String comment, Date date) {
+    public ListMoodData(int color, String comment, Calendar date) {
         mColor = color;
         mComment = comment;
         mDate = date;
@@ -36,11 +38,11 @@ public class ListMoodData {
         mComment = comment;
     }
 
-    public Date getDate() {
+    public Calendar getDate() {
         return mDate;
     }
 
-    public void setDate(Date date) {
+    public void setDate(Calendar date) {
         mDate = date;
     }
 
