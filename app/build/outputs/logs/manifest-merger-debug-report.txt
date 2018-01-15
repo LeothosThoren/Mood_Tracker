@@ -61,17 +61,17 @@ MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Leothos Thoren\.grad
 	android:label
 		ADDED from D:\_MyProjects\MobileAppDev\MoodTracker\app\src\main\AndroidManifest.xml:8:9-41
 	android:roundIcon
-		ADDED from D:\_MyProjects\MobileAppDev\MoodTracker\app\src\main\AndroidManifest.xml:9:9-54
+		ADDED from D:\_MyProjects\MobileAppDev\MoodTracker\app\src\main\AndroidManifest.xml:9:9-67
 	android:icon
-		ADDED from D:\_MyProjects\MobileAppDev\MoodTracker\app\src\main\AndroidManifest.xml:7:9-43
+		ADDED from D:\_MyProjects\MobileAppDev\MoodTracker\app\src\main\AndroidManifest.xml:7:9-67
 	android:allowBackup
 		ADDED from D:\_MyProjects\MobileAppDev\MoodTracker\app\src\main\AndroidManifest.xml:6:9-35
 	android:theme
 		ADDED from D:\_MyProjects\MobileAppDev\MoodTracker\app\src\main\AndroidManifest.xml:11:9-40
-activity#com.leothosthoren.moodtracker.MainActivity
+activity#com.leothosthoren.moodtracker.controler.MainActivity
 ADDED from D:\_MyProjects\MobileAppDev\MoodTracker\app\src\main\AndroidManifest.xml:12:9-18:20
 	android:name
-		ADDED from D:\_MyProjects\MobileAppDev\MoodTracker\app\src\main\AndroidManifest.xml:12:19-47
+		ADDED from D:\_MyProjects\MobileAppDev\MoodTracker\app\src\main\AndroidManifest.xml:12:19-57
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
 ADDED from D:\_MyProjects\MobileAppDev\MoodTracker\app\src\main\AndroidManifest.xml:13:13-17:29
 action#android.intent.action.MAIN
@@ -82,10 +82,10 @@ category#android.intent.category.LAUNCHER
 ADDED from D:\_MyProjects\MobileAppDev\MoodTracker\app\src\main\AndroidManifest.xml:16:17-77
 	android:name
 		ADDED from D:\_MyProjects\MobileAppDev\MoodTracker\app\src\main\AndroidManifest.xml:16:27-74
-activity#com.leothosthoren.moodtracker.HistoryActivity
-ADDED from D:\_MyProjects\MobileAppDev\MoodTracker\app\src\main\AndroidManifest.xml:19:9-62
+activity#com.leothosthoren.moodtracker.controler.HistoryActivity
+ADDED from D:\_MyProjects\MobileAppDev\MoodTracker\app\src\main\AndroidManifest.xml:19:9-72
 	android:name
-		ADDED from D:\_MyProjects\MobileAppDev\MoodTracker\app\src\main\AndroidManifest.xml:19:19-50
+		ADDED from D:\_MyProjects\MobileAppDev\MoodTracker\app\src\main\AndroidManifest.xml:19:19-60
 uses-sdk
 INJECTED from D:\_MyProjects\MobileAppDev\MoodTracker\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\_MyProjects\MobileAppDev\MoodTracker\app\src\main\AndroidManifest.xml
