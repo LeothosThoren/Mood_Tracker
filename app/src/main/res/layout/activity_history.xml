@@ -3,21 +3,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:weightSum="100"
     tools:context="com.leothosthoren.moodtracker.controler.HistoryActivity">
 
-    <ListView
-        android:id="@+id/activity_list"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below = "@+id/Btn_save"
-        />
+    <android.support.v7.app.AlertController.RecycleListView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/Btn_save"
+        android:background="@android:color/darker_gray"
+        android:scrollbars="none" />
 
     <Button
         android:id="@+id/Btn_save"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:text="Sauvegarde"
-        />
+        android:text="Sauvegarde" />
 </RelativeLayout>
