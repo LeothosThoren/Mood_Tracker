@@ -125,7 +125,6 @@ public class MainActivity extends AppCompatActivity {
     * */
     public void getSound(int sound) {
         MediaPlayer mediaPlayer = MediaPlayer.create(this, sound);
-        mediaPlayer.setAudioSessionId(sound);
         mediaPlayer.start();
     }
 

@@ -3,15 +3,17 @@
     android:id="@+id/item_history_layout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:paddingBottom="15dp"
     android:background="@color/banana_yellow"
-    android:weightSum="100"
     android:orientation="vertical">
 
     <TextView
         android:id="@+id/item_history_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
         android:text="date_time"
         android:textColor="#000000"
         android:textSize="15sp" />
@@ -20,7 +22,7 @@
         android:id="@+id/item_history_commentBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="end"
+        android:layout_gravity="end|center_vertical"
         android:background="@null"
         android:contentDescription="@string/comment_icon"
         android:layout_margin="20dp"

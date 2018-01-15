@@ -1,8 +1,5 @@
 package com.leothosthoren.moodtracker.model;
 
-import android.widget.ImageButton;
-
-import java.util.Calendar;
 import java.util.Date;
 
 
