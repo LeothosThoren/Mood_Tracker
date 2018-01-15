@@ -5,13 +5,14 @@
     android:layout_height="match_parent"
     tools:context="com.leothosthoren.moodtracker.controler.HistoryActivity">
 
-    <android.support.v7.app.AlertController.RecycleListView
+    <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/Btn_save"
         android:background="@android:color/darker_gray"
-        android:scrollbars="none" />
+        android:scrollbars="none"
+        />
 
     <Button
         android:id="@+id/Btn_save"

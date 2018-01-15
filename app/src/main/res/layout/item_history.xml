@@ -1,39 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_history_layout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:weightSum="100">
+    android:layout_height="wrap_content"
+    android:background="@color/banana_yellow"
+    android:weightSum="100"
+    android:orientation="vertical">
 
-    <RelativeLayout
-        android:id="@+id/item_history_layout"
+    <TextView
+        android:id="@+id/item_history_text"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_weight="14.29"
-        android:background="@color/banana_yellow">
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="date_time"
+        android:textColor="#000000"
+        android:textSize="15sp" />
 
-        <TextView
-            android:id="@+id/item_history_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="5dp"
-            android:text="date_time"
-            android:textColor="#000000"
-            android:textSize="15sp" />
+    <ImageButton
+        android:id="@+id/item_history_commentBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:background="@null"
+        android:contentDescription="@string/comment_icon"
+        android:layout_margin="20dp"
+        android:src="@drawable/ic_comment_black_48px" />
 
-        <ImageButton
-            android:id="@+id/item_history_commentBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_marginEnd="15dp"
-            android:layout_marginRight="15dp"
-            android:background="@null"
-            android:contentDescription="@string/comment_icon"
-            android:src="@drawable/ic_comment_black_48px" />
-
-    </RelativeLayout>
 
 </LinearLayout>

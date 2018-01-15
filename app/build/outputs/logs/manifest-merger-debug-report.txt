@@ -4,15 +4,16 @@ ADDED from D:\_MyProjects\MobileAppDev\MoodTracker\app\src\main\AndroidManifest.
 INJECTED from D:\_MyProjects\MobileAppDev\MoodTracker\app\src\main\AndroidManifest.xml:2:1-22:12
 INJECTED from D:\_MyProjects\MobileAppDev\MoodTracker\app\src\main\AndroidManifest.xml:2:1-22:12
 INJECTED from D:\_MyProjects\MobileAppDev\MoodTracker\app\src\main\AndroidManifest.xml:2:1-22:12
+MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\d6b5b98e436aec57acb829f892a27940\AndroidManifest.xml:17:1-28:12
 MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\50fbfc8a76a336fa96d6b1f74b2c0892\AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\771aefabb88e7e3dd0f2251de2080bb7\AndroidManifest.xml:2:1-11:12
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\7d299b246d0de64c2aff6cc4141a9b7e\AndroidManifest.xml:17:1-28:12
-MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\f21ad9d0e27e23bb345f6135f72512db\AndroidManifest.xml:17:1-28:12
 MERGED from [com.android.support:support-v4:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\397672371a1493cc66ab1b02d471c55e\AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\ae206f4d3ee3787ac3cdab0a05790133\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\7d299b246d0de64c2aff6cc4141a9b7e\AndroidManifest.xml:17:1-28:12
 MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\7b5b85d3174b97db3bc525c554997097\AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\d34dd62bad43a056aad7478b73ac67b0\AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\0f60409c8e2a15bd35ea403dd3781032\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\f21ad9d0e27e23bb345f6135f72512db\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\ae206f4d3ee3787ac3cdab0a05790133\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\d34dd62bad43a056aad7478b73ac67b0\AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:support-compat:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\d74cf568f953d74dfaff73ac6fb29eac\AndroidManifest.xml:17:1-31:12
 MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\ef89f6cd4700eeb295d79b30cc19e325\AndroidManifest.xml:17:1-30:12
 INJECTED from D:\_MyProjects\MobileAppDev\MoodTracker\app\src\main\AndroidManifest.xml:2:1-22:12
@@ -34,24 +35,26 @@ INJECTED from D:\_MyProjects\MobileAppDev\MoodTracker\app\src\main\AndroidManife
 		ADDED from D:\_MyProjects\MobileAppDev\MoodTracker\app\src\main\AndroidManifest.xml:2:11-69
 application
 ADDED from D:\_MyProjects\MobileAppDev\MoodTracker\app\src\main\AndroidManifest.xml:5:5-20:19
+MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\d6b5b98e436aec57acb829f892a27940\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\d6b5b98e436aec57acb829f892a27940\AndroidManifest.xml:22:5-26:19
 MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\50fbfc8a76a336fa96d6b1f74b2c0892\AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\50fbfc8a76a336fa96d6b1f74b2c0892\AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\771aefabb88e7e3dd0f2251de2080bb7\AndroidManifest.xml:9:5-20
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\771aefabb88e7e3dd0f2251de2080bb7\AndroidManifest.xml:9:5-20
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\7d299b246d0de64c2aff6cc4141a9b7e\AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\7d299b246d0de64c2aff6cc4141a9b7e\AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\f21ad9d0e27e23bb345f6135f72512db\AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\f21ad9d0e27e23bb345f6135f72512db\AndroidManifest.xml:22:5-26:19
 MERGED from [com.android.support:support-v4:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\397672371a1493cc66ab1b02d471c55e\AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:support-v4:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\397672371a1493cc66ab1b02d471c55e\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\ae206f4d3ee3787ac3cdab0a05790133\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\ae206f4d3ee3787ac3cdab0a05790133\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\7d299b246d0de64c2aff6cc4141a9b7e\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\7d299b246d0de64c2aff6cc4141a9b7e\AndroidManifest.xml:22:5-26:19
 MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\7b5b85d3174b97db3bc525c554997097\AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\7b5b85d3174b97db3bc525c554997097\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\d34dd62bad43a056aad7478b73ac67b0\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\d34dd62bad43a056aad7478b73ac67b0\AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\0f60409c8e2a15bd35ea403dd3781032\AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\0f60409c8e2a15bd35ea403dd3781032\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\f21ad9d0e27e23bb345f6135f72512db\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\f21ad9d0e27e23bb345f6135f72512db\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\ae206f4d3ee3787ac3cdab0a05790133\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\ae206f4d3ee3787ac3cdab0a05790133\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\d34dd62bad43a056aad7478b73ac67b0\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\d34dd62bad43a056aad7478b73ac67b0\AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:support-compat:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\d74cf568f953d74dfaff73ac6fb29eac\AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:support-compat:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\d74cf568f953d74dfaff73ac6fb29eac\AndroidManifest.xml:25:5-29:19
 MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\ef89f6cd4700eeb295d79b30cc19e325\AndroidManifest.xml:24:5-28:19
@@ -90,24 +93,26 @@ uses-sdk
 INJECTED from D:\_MyProjects\MobileAppDev\MoodTracker\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\_MyProjects\MobileAppDev\MoodTracker\app\src\main\AndroidManifest.xml
 INJECTED from D:\_MyProjects\MobileAppDev\MoodTracker\app\src\main\AndroidManifest.xml
+MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\d6b5b98e436aec57acb829f892a27940\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\d6b5b98e436aec57acb829f892a27940\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\50fbfc8a76a336fa96d6b1f74b2c0892\AndroidManifest.xml:21:5-23:78
 MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\50fbfc8a76a336fa96d6b1f74b2c0892\AndroidManifest.xml:21:5-23:78
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\771aefabb88e7e3dd0f2251de2080bb7\AndroidManifest.xml:5:5-7:41
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\771aefabb88e7e3dd0f2251de2080bb7\AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\7d299b246d0de64c2aff6cc4141a9b7e\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\7d299b246d0de64c2aff6cc4141a9b7e\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\f21ad9d0e27e23bb345f6135f72512db\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\f21ad9d0e27e23bb345f6135f72512db\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-v4:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\397672371a1493cc66ab1b02d471c55e\AndroidManifest.xml:21:5-23:54
 MERGED from [com.android.support:support-v4:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\397672371a1493cc66ab1b02d471c55e\AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\ae206f4d3ee3787ac3cdab0a05790133\AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\ae206f4d3ee3787ac3cdab0a05790133\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\7d299b246d0de64c2aff6cc4141a9b7e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\7d299b246d0de64c2aff6cc4141a9b7e\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\7b5b85d3174b97db3bc525c554997097\AndroidManifest.xml:21:5-23:60
 MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\7b5b85d3174b97db3bc525c554997097\AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\d34dd62bad43a056aad7478b73ac67b0\AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\d34dd62bad43a056aad7478b73ac67b0\AndroidManifest.xml:21:5-23:61
 MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\0f60409c8e2a15bd35ea403dd3781032\AndroidManifest.xml:21:5-23:58
 MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\0f60409c8e2a15bd35ea403dd3781032\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\f21ad9d0e27e23bb345f6135f72512db\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\f21ad9d0e27e23bb345f6135f72512db\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\ae206f4d3ee3787ac3cdab0a05790133\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\ae206f4d3ee3787ac3cdab0a05790133\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\d34dd62bad43a056aad7478b73ac67b0\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\d34dd62bad43a056aad7478b73ac67b0\AndroidManifest.xml:21:5-23:61
 MERGED from [com.android.support:support-compat:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\d74cf568f953d74dfaff73ac6fb29eac\AndroidManifest.xml:21:5-23:58
 MERGED from [com.android.support:support-compat:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\d74cf568f953d74dfaff73ac6fb29eac\AndroidManifest.xml:21:5-23:58
 MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\ef89f6cd4700eeb295d79b30cc19e325\AndroidManifest.xml:20:5-22:41
@@ -125,27 +130,29 @@ INJECTED from D:\_MyProjects\MobileAppDev\MoodTracker\app\src\main\AndroidManife
 		ADDED from D:\_MyProjects\MobileAppDev\MoodTracker\app\src\main\AndroidManifest.xml
 		INJECTED from D:\_MyProjects\MobileAppDev\MoodTracker\app\src\main\AndroidManifest.xml
 meta-data#android.support.VERSION
-ADDED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\50fbfc8a76a336fa96d6b1f74b2c0892\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\7d299b246d0de64c2aff6cc4141a9b7e\AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\7d299b246d0de64c2aff6cc4141a9b7e\AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\f21ad9d0e27e23bb345f6135f72512db\AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\f21ad9d0e27e23bb345f6135f72512db\AndroidManifest.xml:23:9-25:38
+ADDED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\d6b5b98e436aec57acb829f892a27940\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\50fbfc8a76a336fa96d6b1f74b2c0892\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\50fbfc8a76a336fa96d6b1f74b2c0892\AndroidManifest.xml:26:9-28:38
 MERGED from [com.android.support:support-v4:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\397672371a1493cc66ab1b02d471c55e\AndroidManifest.xml:26:9-28:38
 MERGED from [com.android.support:support-v4:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\397672371a1493cc66ab1b02d471c55e\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\ae206f4d3ee3787ac3cdab0a05790133\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\ae206f4d3ee3787ac3cdab0a05790133\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\7d299b246d0de64c2aff6cc4141a9b7e\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\7d299b246d0de64c2aff6cc4141a9b7e\AndroidManifest.xml:23:9-25:38
 MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\7b5b85d3174b97db3bc525c554997097\AndroidManifest.xml:26:9-28:38
 MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\7b5b85d3174b97db3bc525c554997097\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\d34dd62bad43a056aad7478b73ac67b0\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\d34dd62bad43a056aad7478b73ac67b0\AndroidManifest.xml:26:9-28:38
 MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\0f60409c8e2a15bd35ea403dd3781032\AndroidManifest.xml:26:9-28:38
 MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\0f60409c8e2a15bd35ea403dd3781032\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\f21ad9d0e27e23bb345f6135f72512db\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\f21ad9d0e27e23bb345f6135f72512db\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\ae206f4d3ee3787ac3cdab0a05790133\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\ae206f4d3ee3787ac3cdab0a05790133\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\d34dd62bad43a056aad7478b73ac67b0\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\d34dd62bad43a056aad7478b73ac67b0\AndroidManifest.xml:26:9-28:38
 MERGED from [com.android.support:support-compat:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\d74cf568f953d74dfaff73ac6fb29eac\AndroidManifest.xml:26:9-28:38
 MERGED from [com.android.support:support-compat:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\d74cf568f953d74dfaff73ac6fb29eac\AndroidManifest.xml:26:9-28:38
 	android:value
-		ADDED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\50fbfc8a76a336fa96d6b1f74b2c0892\AndroidManifest.xml:28:13-35
+		ADDED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\d6b5b98e436aec57acb829f892a27940\AndroidManifest.xml:25:13-35
 	android:name
-		ADDED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\50fbfc8a76a336fa96d6b1f74b2c0892\AndroidManifest.xml:27:13-51
+		ADDED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\d6b5b98e436aec57acb829f892a27940\AndroidManifest.xml:24:13-51
 meta-data#android.arch.lifecycle.VERSION
 ADDED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\ef89f6cd4700eeb295d79b30cc19e325\AndroidManifest.xml:25:9-27:47
 	android:value

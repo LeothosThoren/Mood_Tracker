@@ -3,6 +3,7 @@ package com.leothosthoren.moodtracker.model;
 import android.widget.ImageButton;
 
 import java.util.Calendar;
+import java.util.Date;
 
 
 /**
@@ -11,10 +12,10 @@ import java.util.Calendar;
 public class ListMoodItem {
     private int mColor;
     private int mBtnComment;
-    private Calendar mDate;
+    private Date mDate;
 
 
-    public ListMoodItem(int color, int btnComment, Calendar date) {
+    public ListMoodItem(int color, int btnComment, Date date) {
         mColor = color;
         mBtnComment = btnComment;
         mDate = date;
@@ -28,7 +29,7 @@ public class ListMoodItem {
         return mBtnComment;
     }
 
-    public Calendar getDate() {
+    public Date getDate() {
         return mDate;
     }
 }

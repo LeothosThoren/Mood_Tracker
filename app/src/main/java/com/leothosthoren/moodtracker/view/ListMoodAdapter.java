@@ -5,7 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
-import android.widget.RelativeLayout;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.leothosthoren.moodtracker.R;
@@ -34,7 +34,7 @@ public class ListMoodAdapter extends RecyclerView.Adapter<ListMoodAdapter.ListMo
     public void onBindViewHolder(ListMoodViewHolder holder, int position) {
         ListMoodItem currentItem = mListMoodItems.get(position);
 
-        holder.mRelativeLayout.setBackgroundColor(currentItem.getColor());
+        holder.mLinearLayout.setBackgroundColor(currentItem.getColor());
         holder.mTextView.setText(currentItem.getDate().toString());
         holder.mImageButton.setImageResource(currentItem.getBtnComment());
     }
@@ -45,13 +45,13 @@ public class ListMoodAdapter extends RecyclerView.Adapter<ListMoodAdapter.ListMo
     }
 
     public static class ListMoodViewHolder extends RecyclerView.ViewHolder {
-        public RelativeLayout mRelativeLayout;
+        public LinearLayout mLinearLayout;
         public TextView mTextView;
         public ImageButton mImageButton;
 
         public ListMoodViewHolder(View itemView) {
             super(itemView);
-            mRelativeLayout = itemView.findViewById(R.id.item_history_layout);
+            mLinearLayout = itemView.findViewById(R.id.item_history_layout);
             mTextView = itemView.findViewById(R.id.item_history_text);
             mImageButton = itemView.findViewById(R.id.item_history_commentBtn);
         }
