@@ -30,11 +30,13 @@ public class MainActivity extends AppCompatActivity {
                     R.drawable.smiley_normal,
                     R.drawable.smiley_happy,
                     R.drawable.smiley_super_happy}};
+    public String COMMENT;
     private static final int SWIPE_MIN_DISTANCE = 150;
     //    private static final int SWIPE_MAX_OFF_PATH = 250;
 //    private static final int SWIPE_THRESHOLD_VELOCITY = 200;
-    private int index = 3;
+    public int index = 3;
     private GestureDetectorCompat mDetector;
+
 
     private ImageButton mBtnComment;
     private ImageButton mBtnHistory;
@@ -102,6 +104,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         //Need to register the comment if user writes one
+                        COMMENT = edittext.getText().toString();
                         dialog.dismiss();
                     }
                 });
@@ -121,7 +124,7 @@ public class MainActivity extends AppCompatActivity {
     * This method allow you to add sound or music in your app using MediaPlayer
     * */
     public void getSound(int sound) {
-        MediaPlayer mediaPlayer = MediaPlayer.create(MainActivity.this, sound);
+        MediaPlayer mediaPlayer = MediaPlayer.create(this, sound);
         mediaPlayer.start();
     }
 

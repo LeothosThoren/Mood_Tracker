@@ -12,7 +12,7 @@ public class ListMoodData {
     private int mColor;
     private String mComment;
     private Date mDate;
-    private Locale mLocale;
+
 
     public ListMoodData(int color, String comment, Date date) {
         mColor = color;
@@ -43,5 +43,5 @@ public class ListMoodData {
     public void setDate(Date date) {
         mDate = date;
     }
-    
+
 }
