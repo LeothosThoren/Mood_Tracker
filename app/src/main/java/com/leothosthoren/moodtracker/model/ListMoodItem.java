@@ -1,5 +1,6 @@
 package com.leothosthoren.moodtracker.model;
 
+
 import java.util.Date;
 
 
@@ -10,12 +11,14 @@ public class ListMoodItem {
     private int mColor;
     private int mBtnComment;
     private Date mDate;
+    private String mToastComment;
 
 
-    public ListMoodItem(int color, int btnComment, Date date) {
+    public ListMoodItem(int color, int btnComment, Date date, String toastComment) {
         mColor = color;
         mBtnComment = btnComment;
         mDate = date;
+        mToastComment = toastComment;
     }
 
     public int getColor() {
@@ -28,5 +31,9 @@ public class ListMoodItem {
 
     public Date getDate() {
         return mDate;
+    }
+
+    public String getToastComment() {
+        return mToastComment;
     }
 }
