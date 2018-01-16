@@ -15,6 +15,8 @@ import com.leothosthoren.moodtracker.model.ListMoodItem;
 
 import java.util.ArrayList;
 
+import static com.leothosthoren.moodtracker.controler.MainActivity.LIST_COLOR_IMG;
+import static com.leothosthoren.moodtracker.controler.MainActivity.index;
 import static java.text.DateFormat.SECOND_FIELD;
 
 /**
@@ -38,7 +40,7 @@ public class ListMoodAdapter extends RecyclerView.Adapter<ListMoodAdapter.ListMo
     public void onBindViewHolder(ListMoodViewHolder holder, int position) {
         ListMoodItem currentItem = mListMoodItems.get(position);
 
-        holder.mFrameLayout.setBackgroundColor(currentItem.getColor());
+        holder.mFrameLayout.setBackgroundResource(currentItem.getColor());
         holder.mTextView.setText(currentItem.getDate().toString());
         holder.mImageButton.setImageResource(currentItem.getBtnComment());
     }

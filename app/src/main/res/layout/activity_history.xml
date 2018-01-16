@@ -10,8 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/Btn_save"
-        android:background="@android:color/darker_gray"
-        />
+        android:background="@android:color/darker_gray" />
 
     <Button
         android:id="@+id/Btn_save"
@@ -20,29 +19,16 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="16dp"
-        android:layout_marginStart="16dp"
         android:text="Save" />
 
     <Button
         android:id="@+id/Btn_delete"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="45dp"
-        android:layout_marginStart="45dp"
-        android:layout_toEndOf="@+id/Btn_save"
-        android:layout_toRightOf="@+id/Btn_save"
-        android:text="Delete" />
-
-    <Button
-        android:id="@+id/Btn_insert"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:text="Insert" />
+        android:text="Delete" />
+
+
 </RelativeLayout>

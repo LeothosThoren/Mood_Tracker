@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
 
     <FrameLayout
         android:id="@+id/item_history_layout"
@@ -15,6 +17,7 @@
             android:layout_height="wrap_content"
             android:background="@null"
             android:padding="5dp"
+            android:layout_marginBottom="50dp"
             android:text="date_time"
             android:textColor="#000000"
             android:textSize="15sp" />
@@ -22,17 +25,15 @@
         <ImageButton
             android:id="@+id/item_history_commentBtn"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="end"
-            android:layout_marginEnd="10dp"
-            android:layout_marginRight="10dp"
+            android:layout_height="wrap_content"
             android:background="@null"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
             android:contentDescription="@string/comment_icon"
-            android:gravity="center"
-            android:padding="30dp"
             android:src="@drawable/ic_comment_black_48px" />
 
     </FrameLayout>
 
 
-</android.support.v7.widget.CardView>
+</LinearLayout>

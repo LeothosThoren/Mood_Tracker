@@ -19,6 +19,7 @@ import com.leothosthoren.moodtracker.R;
 
 public class MainActivity extends AppCompatActivity {
 
+    public static final int BUNDLE_REQUEST_CODE = 42;
     public static final int[][] LIST_COLOR_IMG = {
             {R.color.faded_red,
                     R.color.warm_grey,
@@ -30,9 +31,11 @@ public class MainActivity extends AppCompatActivity {
                     R.drawable.smiley_normal,
                     R.drawable.smiley_happy,
                     R.drawable.smiley_super_happy}};
+
     private static final int SWIPE_MIN_DISTANCE = 150;
+
     public static String COMMENT;
-    public static int INDEX = 3;
+    public static int index = 3;
     private GestureDetectorCompat mDetector;
     //    private static final int SWIPE_MAX_OFF_PATH = 250;
 //    private static final int SWIPE_THRESHOLD_VELOCITY = 200;
@@ -75,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent historyActivity = new Intent(MainActivity.this, HistoryActivity.class);
-                startActivity(historyActivity);
+                startActivityForResult(historyActivity, BUNDLE_REQUEST_CODE);
             }
         });
 
@@ -144,27 +147,27 @@ public class MainActivity extends AppCompatActivity {
         * */
         @Override
         public boolean onDown(MotionEvent event) {
-//            Log.d(DEBUG_TAG, "onDown: " + event.toString());
+            Log.d(DEBUG_TAG, "onDown: " + event.toString());
             return true;
         }
 
         @Override
         public boolean onFling(MotionEvent event1, MotionEvent event2,
                                float velocityX, float velocityY) {
-//            Log.d(DEBUG_TAG, "onFling: " + event1.toString() + event2.toString());
+            Log.d(DEBUG_TAG, "onFling: " + event1.toString() + event2.toString());
 
-            if (INDEX < LIST_COLOR_IMG[0].length - 1 && event1.getY() - event2.getY() > SWIPE_MIN_DISTANCE) {
+            if (index < LIST_COLOR_IMG[0].length - 1 && event1.getY() - event2.getY() > SWIPE_MIN_DISTANCE) {
                 getSound(R.raw.smb_coin);
-                INDEX++;
-                mBtnSmiley.setImageResource(LIST_COLOR_IMG[1][INDEX]);
-                mRelativeLayout.setBackgroundColor(getResources().getColor(LIST_COLOR_IMG[0][INDEX]));
+                index++;
+                mBtnSmiley.setImageResource(LIST_COLOR_IMG[1][index]);
+                mRelativeLayout.setBackgroundColor(getResources().getColor(LIST_COLOR_IMG[0][index]));
 
 
-            } else if (INDEX > 0 && event2.getY() - event1.getY() > SWIPE_MIN_DISTANCE) {
+            } else if (index > 0 && event2.getY() - event1.getY() > SWIPE_MIN_DISTANCE) {
                 getSound(R.raw.smb_jump);
-                INDEX--;
-                mBtnSmiley.setImageResource(LIST_COLOR_IMG[1][INDEX]);
-                mRelativeLayout.setBackgroundColor(getResources().getColor(LIST_COLOR_IMG[0][INDEX]));
+                index--;
+                mBtnSmiley.setImageResource(LIST_COLOR_IMG[1][index]);
+                mRelativeLayout.setBackgroundColor(getResources().getColor(LIST_COLOR_IMG[0][index]));
 
             } else
                 return false;

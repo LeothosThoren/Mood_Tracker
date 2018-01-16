@@ -1,6 +1,8 @@
 package com.leothosthoren.moodtracker.model;
 
 
+import com.leothosthoren.moodtracker.R;
+
 import java.util.Date;
 
 
