@@ -1,100 +1,88 @@
 package com.leothosthoren.moodtracker.controler;
 
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.Toast;
 
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
 import com.leothosthoren.moodtracker.R;
 import com.leothosthoren.moodtracker.model.ListMoodItem;
+import com.leothosthoren.moodtracker.model.MoodDataStorage;
 import com.leothosthoren.moodtracker.view.ListMoodAdapter;
 
-import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.Date;
 
+import static com.leothosthoren.moodtracker.controler.MainActivity.COMMENT;
+import static com.leothosthoren.moodtracker.controler.MainActivity.INDEX;
+import static com.leothosthoren.moodtracker.controler.MainActivity.LIST_COLOR_IMG;
+
 public class HistoryActivity extends AppCompatActivity {
 
-    public static final String SHARED_PREFERENCES = "SHARED_PREFERENCES";
-    public static final String MOOD_DATA = "MOOD_DATA";
-
+    MoodDataStorage data = new MoodDataStorage();
     ArrayList<ListMoodItem> mListMoodItems = new ArrayList<>();
+    Date now = new Date();
 
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
-
-    private Date now = new Date();
+    private ImageButton btnComment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_history);
 
-        loadData();
+        data.loadData(mListMoodItems, this);
         buildRecyclerView();
 
-        Button btnSave = findViewById(R.id.Btn_save);
-        Button btnDelete = findViewById(R.id.Btn_delete);
-        Button btnInsert = findViewById(R.id.Btn_insert);
+        //Button for testing sharepreferences
+        Button btnSave = (Button) findViewById(R.id.Btn_save);
+        Button btnDelete = (Button) findViewById(R.id.Btn_delete);
+        Button btnInsert = (Button) findViewById(R.id.Btn_insert);
+        btnComment = (ImageButton) findViewById(R.id.item_history_commentBtn);
 
+        if (COMMENT == null || COMMENT.equals("")) {
+            btnComment.setEnabled(false);
+            btnComment.setVisibility(View.INVISIBLE);
+        }
+
+        btnComment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(HistoryActivity.this, COMMENT, Toast.LENGTH_LONG).show();
+            }
+        });
+
+        /**Series of button for test**/
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                saveData();
+                data.saveData(mListMoodItems, HistoryActivity.this);
             }
         });
 
         btnDelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                clearData();
+                data.clearData(HistoryActivity.this);
             }
         });
 
         btnInsert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mListMoodItems.add(new ListMoodItem(R.color.faded_red, R.drawable.ic_comment_black_48px, now));
-                mListMoodItems.add(new ListMoodItem(R.color.cornflower_blue_65, R.drawable.ic_comment_black_48px, now));
-                mListMoodItems.add(new ListMoodItem(R.color.light_sage, R.drawable.ic_comment_black_48px, now));
+                mListMoodItems.add(new ListMoodItem(LIST_COLOR_IMG[0][INDEX],
+                        R.drawable.ic_comment_black_48px,
+                        now,
+                        COMMENT));
             }
         });
 
-    }
-
-    private void saveData() {
-        SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFERENCES, MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        Gson gson = new Gson();
-        String json = gson.toJson(mListMoodItems);
-        editor.putString(MOOD_DATA, json);
-        editor.apply();
-    }
-
-    private void loadData() {
-        SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFERENCES, MODE_PRIVATE);
-        Gson gson = new Gson();
-        String json = sharedPreferences.getString(MOOD_DATA, null);
-        Type type = new TypeToken<ArrayList<ListMoodItem>>() {
-        }.getType();
-        mListMoodItems = gson.fromJson(json, type);
-
-        if (mListMoodItems == null) {
-            mListMoodItems = new ArrayList<>();
-        }
-    }
-
-    private void clearData() {
-        SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFERENCES, MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.clear();
-        editor.apply();
     }
 
     private void buildRecyclerView() {
@@ -106,4 +94,6 @@ public class HistoryActivity extends AppCompatActivity {
         mRecyclerView.setLayoutManager(mLayoutManager);
         mRecyclerView.setAdapter(mAdapter);
     }
+
+
 }

@@ -30,13 +30,12 @@ public class MainActivity extends AppCompatActivity {
                     R.drawable.smiley_normal,
                     R.drawable.smiley_happy,
                     R.drawable.smiley_super_happy}};
-    public String COMMENT;
     private static final int SWIPE_MIN_DISTANCE = 150;
+    public static String COMMENT;
+    public static int INDEX = 3;
+    private GestureDetectorCompat mDetector;
     //    private static final int SWIPE_MAX_OFF_PATH = 250;
 //    private static final int SWIPE_THRESHOLD_VELOCITY = 200;
-    public int index = 3;
-    private GestureDetectorCompat mDetector;
-
 
     private ImageButton mBtnComment;
     private ImageButton mBtnHistory;
@@ -145,27 +144,27 @@ public class MainActivity extends AppCompatActivity {
         * */
         @Override
         public boolean onDown(MotionEvent event) {
-            Log.d(DEBUG_TAG, "onDown: " + event.toString());
+//            Log.d(DEBUG_TAG, "onDown: " + event.toString());
             return true;
         }
 
         @Override
         public boolean onFling(MotionEvent event1, MotionEvent event2,
                                float velocityX, float velocityY) {
-            Log.d(DEBUG_TAG, "onFling: " + event1.toString() + event2.toString());
+//            Log.d(DEBUG_TAG, "onFling: " + event1.toString() + event2.toString());
 
-            if (index < LIST_COLOR_IMG[0].length - 1 && event1.getY() - event2.getY() > SWIPE_MIN_DISTANCE) {
+            if (INDEX < LIST_COLOR_IMG[0].length - 1 && event1.getY() - event2.getY() > SWIPE_MIN_DISTANCE) {
                 getSound(R.raw.smb_coin);
-                index++;
-                mBtnSmiley.setImageResource(LIST_COLOR_IMG[1][index]);
-                mRelativeLayout.setBackgroundColor(getResources().getColor(LIST_COLOR_IMG[0][index]));
+                INDEX++;
+                mBtnSmiley.setImageResource(LIST_COLOR_IMG[1][INDEX]);
+                mRelativeLayout.setBackgroundColor(getResources().getColor(LIST_COLOR_IMG[0][INDEX]));
 
 
-            } else if (index > 0 && event2.getY() - event1.getY() > SWIPE_MIN_DISTANCE) {
+            } else if (INDEX > 0 && event2.getY() - event1.getY() > SWIPE_MIN_DISTANCE) {
                 getSound(R.raw.smb_jump);
-                index--;
-                mBtnSmiley.setImageResource(LIST_COLOR_IMG[1][index]);
-                mRelativeLayout.setBackgroundColor(getResources().getColor(LIST_COLOR_IMG[0][index]));
+                INDEX--;
+                mBtnSmiley.setImageResource(LIST_COLOR_IMG[1][INDEX]);
+                mRelativeLayout.setBackgroundColor(getResources().getColor(LIST_COLOR_IMG[0][INDEX]));
 
             } else
                 return false;
