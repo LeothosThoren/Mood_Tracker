@@ -26,7 +26,9 @@ public class ListMoodAdapter extends RecyclerView.Adapter<ListMoodAdapter.ListMo
 
     @Override
     public ListMoodViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        int weight = 7;
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_history, parent, false);
+        view.getLayoutParams().height = parent.getHeight() / weight;
         ListMoodViewHolder lmvh = new ListMoodViewHolder(view);
         return lmvh;
     }
