@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
 
     private static final int SWIPE_MIN_DISTANCE = 150;
 
-    public static String COMMENT;
+    public static String COMMENT = "";
     public static int index = 3;
     private GestureDetectorCompat mDetector;
     //    private static final int SWIPE_MAX_OFF_PATH = 250;
