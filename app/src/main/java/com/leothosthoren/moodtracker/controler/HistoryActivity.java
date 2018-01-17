@@ -16,12 +16,14 @@ import com.leothosthoren.moodtracker.model.ListMoodItem;
 import com.leothosthoren.moodtracker.view.ListMoodAdapter;
 
 import java.lang.reflect.Type;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Locale;
 
-import static com.leothosthoren.moodtracker.controler.MainActivity.COMMENT;
 import static com.leothosthoren.moodtracker.controler.MainActivity.LIST_COLOR_IMG;
-import static com.leothosthoren.moodtracker.controler.MainActivity.index;
+import static com.leothosthoren.moodtracker.controler.MainActivity.comment;
+import static com.leothosthoren.moodtracker.controler.MainActivity.indexMood;
 
 public class HistoryActivity extends AppCompatActivity {
 
@@ -29,7 +31,11 @@ public class HistoryActivity extends AppCompatActivity {
     public static final String MOOD_DATA = "MOOD_DATA";
 
     ArrayList<ListMoodItem> mListMoodItems = new ArrayList<>();
+
     Date now = new Date();
+    Locale mLocale = Locale.FRANCE;
+    SimpleDateFormat sdf1 = new SimpleDateFormat("HH:mm", mLocale);
+    String date = sdf1.format(now);
 
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
@@ -54,10 +60,13 @@ public class HistoryActivity extends AppCompatActivity {
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mListMoodItems.add(new ListMoodItem(LIST_COLOR_IMG[0][index],
+                mListMoodItems.add(new ListMoodItem(
+                        LIST_COLOR_IMG[0][indexMood],
+                        indexMood,
+                        comment,
                         R.drawable.ic_comment_black_48px,
-                        now,
-                        COMMENT));
+                        date
+                ));
                 saveData();
             }
         });
