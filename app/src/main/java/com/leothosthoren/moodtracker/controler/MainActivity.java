@@ -13,6 +13,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 import com.leothosthoren.moodtracker.R;
@@ -42,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
 
     private ImageButton mBtnComment;
     private ImageButton mBtnHistory;
-    private ImageButton mBtnSmiley;
+    private ImageView mSmileyImg;
     private RelativeLayout mRelativeLayout;
 
     @Override
@@ -52,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
 
         mBtnComment = (ImageButton) findViewById(R.id.main_activity_comment);
         mBtnHistory = (ImageButton) findViewById(R.id.main_activity_history);
-        mBtnSmiley = (ImageButton) findViewById(R.id.main_activity_img);
+        mSmileyImg = (ImageView) findViewById(R.id.main_activity_img);
         mRelativeLayout = (RelativeLayout) findViewById(R.id.main_activity_layout_backgound);
         mDetector = new GestureDetectorCompat(this, new MyGestureListener());
 
@@ -127,7 +128,9 @@ public class MainActivity extends AppCompatActivity {
     * */
     public void getSound(int sound) {
         MediaPlayer mediaPlayer = MediaPlayer.create(this, sound);
+//        MediaPlayer.create(this, sound);
         mediaPlayer.start();
+        mediaPlayer.stop();
     }
 
 
@@ -159,14 +162,14 @@ public class MainActivity extends AppCompatActivity {
             if (indexMood < LIST_COLOR_IMG[0].length - 1 && event1.getY() - event2.getY() > SWIPE_MIN_DISTANCE) {
                 getSound(R.raw.smb_coin);
                 indexMood++;
-                mBtnSmiley.setImageResource(LIST_COLOR_IMG[1][indexMood]);
+                mSmileyImg.setImageResource(LIST_COLOR_IMG[1][indexMood]);
                 mRelativeLayout.setBackgroundColor(getResources().getColor(LIST_COLOR_IMG[0][indexMood]));
 
 
             } else if (indexMood > 0 && event2.getY() - event1.getY() > SWIPE_MIN_DISTANCE) {
                 getSound(R.raw.smb_jump);
                 indexMood--;
-                mBtnSmiley.setImageResource(LIST_COLOR_IMG[1][indexMood]);
+                mSmileyImg.setImageResource(LIST_COLOR_IMG[1][indexMood]);
                 mRelativeLayout.setBackgroundColor(getResources().getColor(LIST_COLOR_IMG[0][indexMood]));
 
             } else

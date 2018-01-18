@@ -7,7 +7,6 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -38,7 +37,7 @@ public class HistoryActivity extends AppCompatActivity {
     String date = sdf1.format(now);
 
     private RecyclerView mRecyclerView;
-    private RecyclerView.Adapter mAdapter;
+    private ListMoodAdapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
 
 
@@ -53,7 +52,6 @@ public class HistoryActivity extends AppCompatActivity {
         //Button for testing sharepreferences
         Button btnSave = (Button) findViewById(R.id.Btn_save);
         Button btnDelete = (Button) findViewById(R.id.Btn_delete);
-        ImageButton mBtnComment = (ImageButton) findViewById(R.id.item_history_commentBtn);
 
 
         /**Series of button for test**/
@@ -119,6 +117,13 @@ public class HistoryActivity extends AppCompatActivity {
 
         mRecyclerView.setLayoutManager(mLayoutManager);
         mRecyclerView.setAdapter(mAdapter);
+
+        mAdapter.setOnItemClickListener(new ListMoodAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(int position) {
+                mListMoodItems.get(position);
+            }
+        });
     }
 
 

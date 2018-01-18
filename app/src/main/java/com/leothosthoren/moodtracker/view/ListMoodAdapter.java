@@ -7,7 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
-import android.widget.TableRow;
 import android.widget.TextView;
 
 import com.leothosthoren.moodtracker.R;
@@ -15,17 +14,20 @@ import com.leothosthoren.moodtracker.model.ListMoodItem;
 
 import java.util.ArrayList;
 
-import static com.leothosthoren.moodtracker.controler.MainActivity.indexMood;
-
 /**
  * Created by Sofiane M. alias Leothos Thoren on 15/01/2018
  */
 public class ListMoodAdapter extends RecyclerView.Adapter<ListMoodAdapter.ListMoodViewHolder> {
-    public static final int NUMBER_ITEM = 8;
+    private static final int NUMBER_ITEM = 8;
     private ArrayList<ListMoodItem> mListMoodItems;
+    private OnItemClickListener mListener;
 
     public ListMoodAdapter(ArrayList<ListMoodItem> listMoodItems) {
         mListMoodItems = listMoodItems;
+    }
+
+    public void setOnItemClickListener(OnItemClickListener listener) {
+        mListener = listener;
     }
 
     @Override
@@ -33,7 +35,7 @@ public class ListMoodAdapter extends RecyclerView.Adapter<ListMoodAdapter.ListMo
         int weight = 7;
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_history, parent, false);
         view.getLayoutParams().height = parent.getHeight() / weight;
-        ListMoodViewHolder lmvh = new ListMoodViewHolder(view);
+        ListMoodViewHolder lmvh = new ListMoodViewHolder(view, mListener);
         return lmvh;
     }
 
@@ -42,7 +44,7 @@ public class ListMoodAdapter extends RecyclerView.Adapter<ListMoodAdapter.ListMo
         ListMoodItem currentItem = mListMoodItems.get(position);
 
 //        int widthLayout =  hold * (20 * (indexMood + 1)) / 100;
-        Log.d("widthlayout value", holder.mFrameLayout.findViewById(R.id.item_history_layout).getWidth()+ "");
+        Log.d("widthlayout value", holder.mFrameLayout.findViewById(R.id.item_history_layout).getWidth() + "");
         Log.d("Holder", holder.toString());
 
         holder.mFrameLayout.setBackgroundResource(currentItem.getColor());
@@ -55,7 +57,6 @@ public class ListMoodAdapter extends RecyclerView.Adapter<ListMoodAdapter.ListMo
 //        holder.mFrameLayout.setMinimumWidth(currentItem.getSize(widthLayout));
     }
 
-
     @Override
     public int getItemCount() {
         if (mListMoodItems.size() == NUMBER_ITEM)
@@ -63,18 +64,35 @@ public class ListMoodAdapter extends RecyclerView.Adapter<ListMoodAdapter.ListMo
         return mListMoodItems.size();
     }
 
+    public interface OnItemClickListener {
+        void onItemClick(int position);
+    }
 
     public static class ListMoodViewHolder extends RecyclerView.ViewHolder {
-        public FrameLayout mFrameLayout;
-        public TextView mTextView;
-        public ImageButton mImageButton;
+        private FrameLayout mFrameLayout;
+        private TextView mTextView;
+        private ImageButton mImageButton;
 
-        public ListMoodViewHolder(View itemView) {
+        private ListMoodViewHolder(View itemView, final OnItemClickListener listener) {
             super(itemView);
             mFrameLayout = itemView.findViewById(R.id.item_history_layout);
             mTextView = itemView.findViewById(R.id.item_history_text);
             mImageButton = itemView.findViewById(R.id.item_history_commentBtn);
 
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (listener != null) {
+                        int position = getAdapterPosition();
+                        if (position != RecyclerView.NO_POSITION) {
+                            listener.onItemClick(position);
+                        }
+                    }
+                }
+            });
+
         }
     }
+
+
 }
