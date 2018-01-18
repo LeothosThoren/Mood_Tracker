@@ -1,12 +1,14 @@
 package com.leothosthoren.moodtracker.view;
 
+import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
-import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.TableRow;
 import android.widget.TextView;
 
 import com.leothosthoren.moodtracker.R;
@@ -18,12 +20,15 @@ import java.util.ArrayList;
  * Created by Sofiane M. alias Leothos Thoren on 15/01/2018
  */
 public class ListMoodAdapter extends RecyclerView.Adapter<ListMoodAdapter.ListMoodViewHolder> {
+
     private static final int NUMBER_ITEM = 8;
     private ArrayList<ListMoodItem> mListMoodItems;
     private OnItemClickListener mListener;
+    private Context mContext;
 
-    public ListMoodAdapter(ArrayList<ListMoodItem> listMoodItems) {
+    public ListMoodAdapter(ArrayList<ListMoodItem> listMoodItems, Context context) {
         mListMoodItems = listMoodItems;
+        mContext = context;
     }
 
     public void setOnItemClickListener(OnItemClickListener listener) {
@@ -41,20 +46,29 @@ public class ListMoodAdapter extends RecyclerView.Adapter<ListMoodAdapter.ListMo
 
     @Override
     public void onBindViewHolder(ListMoodViewHolder holder, int position) {
-        ListMoodItem currentItem = mListMoodItems.get(position);
-
-//        int widthLayout =  hold * (20 * (indexMood + 1)) / 100;
-        Log.d("widthlayout value", holder.mFrameLayout.findViewById(R.id.item_history_layout).getWidth() + "");
-        Log.d("Holder", holder.toString());
+        final ListMoodItem currentItem = mListMoodItems.get(position);
 
         holder.mFrameLayout.setBackgroundResource(currentItem.getColor());
         holder.mTextView.setText(currentItem.getDate());
-        holder.mImageButton.setImageResource(currentItem.getBtnComment());
-//
-//        TableRow.LayoutParams params = new TableRow.LayoutParams(widthLayout, 100); // (width, height)
-//        holder.mFrameLayout.setLayoutParams(params);
-//
-//        holder.mFrameLayout.setMinimumWidth(currentItem.getSize(widthLayout));
+        holder.mImageViewComment.setImageResource(currentItem.getBtnComment());
+        holder.mToastView.setText(currentItem.getComment());
+
+        if (currentItem.getComment().equals(""))
+            holder.mImageViewComment.setVisibility(View.GONE);
+
+        //Gestion du layout
+        int formula = 20 * (currentItem.getSmileyValue() + 1) / 100;
+        int widthLayout = (int) holder.mFrameLayout.getLayoutParams().width;
+        int heightLayout = (int) holder.mFrameLayout.getLayoutParams().height;
+
+        Log.d("widthlayout value", widthLayout + "");
+
+//        TableRow.LayoutParams params = new TableRow.LayoutParams(500 * formula, 500); // (width, height)
+
+//        holder.mFrameLayout.setLayoutParams(layoutParams);
+
+
+
     }
 
     @Override
@@ -64,22 +78,27 @@ public class ListMoodAdapter extends RecyclerView.Adapter<ListMoodAdapter.ListMo
         return mListMoodItems.size();
     }
 
+
     public interface OnItemClickListener {
         void onItemClick(int position);
     }
 
     public static class ListMoodViewHolder extends RecyclerView.ViewHolder {
-        private FrameLayout mFrameLayout;
-        private TextView mTextView;
-        private ImageButton mImageButton;
+        public FrameLayout mFrameLayout;
+        public TextView mTextView;
+        public ImageView mImageViewComment;
+        public TextView mToastView;
+
 
         private ListMoodViewHolder(View itemView, final OnItemClickListener listener) {
             super(itemView);
             mFrameLayout = itemView.findViewById(R.id.item_history_layout);
             mTextView = itemView.findViewById(R.id.item_history_text);
-            mImageButton = itemView.findViewById(R.id.item_history_commentBtn);
+            mImageViewComment = itemView.findViewById(R.id.item_history_commentBtn);
+            mToastView = itemView.findViewById(R.id.item_history_toast);
 
-            itemView.setOnClickListener(new View.OnClickListener() {
+
+            mImageViewComment.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     if (listener != null) {
@@ -93,6 +112,5 @@ public class ListMoodAdapter extends RecyclerView.Adapter<ListMoodAdapter.ListMo
 
         }
     }
-
 
 }

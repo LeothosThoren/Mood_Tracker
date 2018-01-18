@@ -7,6 +7,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -48,37 +49,8 @@ public class HistoryActivity extends AppCompatActivity {
 
         loadData();
         buildRecyclerView();
+        setButton();
 
-        //Button for testing sharepreferences
-        Button btnSave = (Button) findViewById(R.id.Btn_save);
-        Button btnDelete = (Button) findViewById(R.id.Btn_delete);
-
-
-        /**Series of button for test**/
-        btnSave.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mListMoodItems.add(new ListMoodItem(
-                        LIST_COLOR_IMG[0][indexMood],
-                        indexMood,
-                        comment,
-                        R.drawable.ic_comment_black_48px,
-                        date
-                ));
-                saveData();
-            }
-        });
-
-        btnDelete.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                clearData();
-            }
-        });
-
-
-//  if (COMMENT.equalsIgnoreCase(""))
-//          mBtnComment.setVisibility(View.GONE);
     }
 
     public void saveData() {
@@ -108,12 +80,45 @@ public class HistoryActivity extends AppCompatActivity {
         editor.clear().apply();
     }
 
+    public void setButton() {
+        //Button for testing sharepreferences
+        Button btnSave = (Button) findViewById(R.id.Btn_save);
+        Button btnDelete = (Button) findViewById(R.id.Btn_delete);
+
+        /**Series of button for test**/
+        btnSave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mListMoodItems.add(new ListMoodItem(
+                        LIST_COLOR_IMG[0][indexMood],
+                        indexMood,
+                        comment,
+                        R.drawable.ic_comment_black_48px,
+                        date
+                ));
+                saveData();
+            }
+        });
+
+        btnDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                clearData();
+            }
+        });
+    }
+
+    public void toastMaker(int position) {
+        String text = mListMoodItems.get(position).getComment();
+        Toast.makeText(this, text, Toast.LENGTH_SHORT).show();
+        mAdapter.notifyItemChanged(position);
+    }
 
     private void buildRecyclerView() {
         mRecyclerView = findViewById(R.id.recyclerView);
         mRecyclerView.setHasFixedSize(true);
         mLayoutManager = new LinearLayoutManager(this);
-        mAdapter = new ListMoodAdapter(mListMoodItems);
+        mAdapter = new ListMoodAdapter(mListMoodItems, this);
 
         mRecyclerView.setLayoutManager(mLayoutManager);
         mRecyclerView.setAdapter(mAdapter);
@@ -121,7 +126,7 @@ public class HistoryActivity extends AppCompatActivity {
         mAdapter.setOnItemClickListener(new ListMoodAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(int position) {
-                mListMoodItems.get(position);
+                toastMaker(position);
             }
         });
     }

@@ -130,7 +130,6 @@ public class MainActivity extends AppCompatActivity {
         MediaPlayer mediaPlayer = MediaPlayer.create(this, sound);
 //        MediaPlayer.create(this, sound);
         mediaPlayer.start();
-        mediaPlayer.stop();
     }
 
 

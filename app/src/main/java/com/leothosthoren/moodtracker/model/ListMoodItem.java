@@ -1,13 +1,18 @@
 package com.leothosthoren.moodtracker.model;
 
 
+import android.app.Activity;
+import android.widget.Toast;
+
+import static com.leothosthoren.moodtracker.controler.MainActivity.comment;
+
 /**
  * Created by Sofiane M. alias Leothos Thoren on 13/01/2018
  */
 public class ListMoodItem {
     private int mColor;
     private int mSmileyValue;
-    private String comment;
+    private String mComment;
     private int mBtnComment;
     private String mDate;
 
@@ -15,7 +20,7 @@ public class ListMoodItem {
     public ListMoodItem(int color, int smileyValue, String comment, int btnComment, String date) {
         mColor = color;
         mSmileyValue = smileyValue;
-        this.comment = comment;
+        mComment = comment;
         mBtnComment = btnComment;
         mDate = date;
     }
@@ -29,7 +34,7 @@ public class ListMoodItem {
     }
 
     public String getComment() {
-        return comment;
+        return mComment;
     }
 
     public int getBtnComment() {

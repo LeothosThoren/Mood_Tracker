@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Mood Tracker</string>
     <string name="smiley_icon">smiley</string>
-    <string name="comment_icon">comment_icon</string>
+    <string name="comment_icon">comment icon</string>
+    <string name="toast_text">toast</string>
 </resources>
