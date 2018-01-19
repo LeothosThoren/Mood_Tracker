@@ -57,16 +57,12 @@ public class ListMoodAdapter extends RecyclerView.Adapter<ListMoodAdapter.ListMo
         if (currentItem.getComment().equals(""))
             holder.mImageViewComment.setVisibility(View.GONE);
 
-        //Gestion du layout
-        int devicewidth;
+        //Display metric can catch the width and height of the device
         DisplayMetrics displaymetrics = new DisplayMetrics();
         ((Activity) mContext).getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
-        //if you need three fix imageview in width
-         devicewidth = (displaymetrics.widthPixels * 20 * (currentItem.getSmileyValue() + 1)) / 100;
-
-//        //if you need 4-5-6 anything fix imageview in height
-//        int deviceheight = displaymetrics.heightPixels / 4;
-
+        //This variable take the width of the device and with the index value and a calculation
+        //in percent the layout size is adjusting
+        int devicewidth = (displaymetrics.widthPixels * 20 * (currentItem.getSmileyValue() + 1)) / 100;
         holder.mFrameLayout.getLayoutParams().width = devicewidth;
 
     }

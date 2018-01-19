@@ -141,7 +141,10 @@ public class HistoryActivity extends AppCompatActivity {
 
     public void toastMaker(int position) {
         String text = mListMoodItems.get(position).getComment();
-        Toast.makeText(this, text, Toast.LENGTH_SHORT).show();
+        Toast toast = Toast.makeText(this, text, Toast.LENGTH_SHORT);
+        View vt = toast.getView();
+        vt.setBackgroundColor(getResources().getColor(R.color.black));
+        toast.show();
         mAdapter.notifyItemChanged(position);
     }
 

@@ -12,5 +12,6 @@
     <color name="light_sage">#ffb8e986</color>
     <color name="banana_yellow">#fff9ec4f</color>
 
-
+    <!--Toast background color and text color-->
+    <color name="black">#323232</color>
 </resources>
