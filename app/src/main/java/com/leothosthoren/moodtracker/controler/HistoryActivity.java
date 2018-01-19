@@ -9,8 +9,12 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
@@ -141,10 +145,17 @@ public class HistoryActivity extends AppCompatActivity {
 
     public void toastMaker(int position) {
         String text = mListMoodItems.get(position).getComment();
-        Toast toast = Toast.makeText(this, text, Toast.LENGTH_SHORT);
-        View vt = toast.getView();
-        vt.setBackgroundColor(getResources().getColor(R.color.black));
+        LayoutInflater inflater = getLayoutInflater();
+        View layout = inflater.inflate(R.layout.custom_toast,
+                (ViewGroup) findViewById(R.id.custom_toast_container));
+        TextView toastText = (TextView) layout.findViewById(R.id.text);
+        toastText.setText(text);
+
+        Toast toast = new Toast(getApplicationContext());
+        toast.setDuration(Toast.LENGTH_LONG);
+        toast.setView(layout);
         toast.show();
+
         mAdapter.notifyItemChanged(position);
     }
 
