@@ -18,6 +18,7 @@ import com.leothosthoren.moodtracker.view.ListMoodAdapter;
 import java.lang.reflect.Type;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 
@@ -36,6 +37,8 @@ public class HistoryActivity extends AppCompatActivity {
     Locale mLocale = Locale.FRANCE;
     SimpleDateFormat sdf1 = new SimpleDateFormat("HH:mm", mLocale);
     String date = sdf1.format(now);
+
+
 
     private RecyclerView mRecyclerView;
     private ListMoodAdapter mAdapter;
@@ -112,6 +115,28 @@ public class HistoryActivity extends AppCompatActivity {
         String text = mListMoodItems.get(position).getComment();
         Toast.makeText(this, text, Toast.LENGTH_SHORT).show();
         mAdapter.notifyItemChanged(position);
+    }
+
+    public String dateMaker(){
+        int SECONDS_IN_A_DAY = 24 * 60 * 60;
+
+        Calendar thatDay = Calendar.getInstance();
+        thatDay.setTime(new Date(0)); /* reset */
+        thatDay.set(Calendar.DAY_OF_MONTH,1);
+        thatDay.set(Calendar.MONTH,0); // 0-11 so 1 less
+
+
+        Calendar today = Calendar.getInstance();
+        long diff =  thatDay.getTimeInMillis() - today.getTimeInMillis();
+        long diffSec = diff / 1000;
+
+        long days = diffSec / SECONDS_IN_A_DAY;
+        long secondsDay = diffSec % SECONDS_IN_A_DAY;
+        long seconds = secondsDay % 60;
+        long minutes = (secondsDay / 60) % 60;
+        long hours = (secondsDay / 3600); // % 24 not needed
+
+        return "Il y a " + days + " " +minutes + " " + seconds + " jours";
     }
 
     private void buildRecyclerView() {

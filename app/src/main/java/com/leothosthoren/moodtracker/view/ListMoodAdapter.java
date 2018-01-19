@@ -8,7 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
-import android.widget.TableRow;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.leothosthoren.moodtracker.R;
@@ -49,7 +49,7 @@ public class ListMoodAdapter extends RecyclerView.Adapter<ListMoodAdapter.ListMo
         final ListMoodItem currentItem = mListMoodItems.get(position);
 
         holder.mFrameLayout.setBackgroundResource(currentItem.getColor());
-        holder.mTextView.setText(currentItem.getDate());
+        holder.mTextView.setText(currentItem.getDate(position));
         holder.mImageViewComment.setImageResource(currentItem.getBtnComment());
         holder.mToastView.setText(currentItem.getComment());
 
@@ -58,16 +58,18 @@ public class ListMoodAdapter extends RecyclerView.Adapter<ListMoodAdapter.ListMo
 
         //Gestion du layout
         int formula = 20 * (currentItem.getSmileyValue() + 1) / 100;
-        int widthLayout = (int) holder.mFrameLayout.getLayoutParams().width;
-        int heightLayout = (int) holder.mFrameLayout.getLayoutParams().height;
-
-        Log.d("widthlayout value", widthLayout + "");
-
-//        TableRow.LayoutParams params = new TableRow.LayoutParams(500 * formula, 500); // (width, height)
-
-//        holder.mFrameLayout.setLayoutParams(layoutParams);
 
 
+//Revoir mon calcul de la taille et exploiter la méthode ci-dessous
+//        LinearLayout.LayoutParams params = new
+//                LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
+//                ViewGroup.LayoutParams.WRAP_CONTENT);
+//        // set height of RecyclerView
+//        params.width = ViewGroup.LayoutParams.MATCH_PARENT * (20 *(currentItem.getSmileyValue() +1))/100;
+//        holder.itemView.setLayoutParams(params);
+
+
+//        Log.d("widthlayout value", params +"");
 
     }
 

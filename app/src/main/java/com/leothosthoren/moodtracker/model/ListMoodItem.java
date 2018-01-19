@@ -1,11 +1,6 @@
 package com.leothosthoren.moodtracker.model;
 
 
-import android.app.Activity;
-import android.widget.Toast;
-
-import static com.leothosthoren.moodtracker.controler.MainActivity.comment;
-
 /**
  * Created by Sofiane M. alias Leothos Thoren on 13/01/2018
  */
@@ -41,7 +36,14 @@ public class ListMoodItem {
         return mBtnComment;
     }
 
-    public String getDate() {
+    public String getDate(int value) {
+
+        if (value == 0)
+            mDate = "Aujourd'hui";
+        else if (value == 1)
+            mDate = "Hier";
+        else
+            mDate = "il y a " + value + " jours";
         return mDate;
     }
 

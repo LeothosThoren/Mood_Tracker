@@ -132,6 +132,10 @@ public class MainActivity extends AppCompatActivity {
         mediaPlayer.start();
     }
 
+    public void setEmptyComment (){
+        comment = "";
+    }
+
 
     /*
     * Class which manage the swipe gesture
@@ -149,20 +153,21 @@ public class MainActivity extends AppCompatActivity {
         * */
         @Override
         public boolean onDown(MotionEvent event) {
-            Log.d(DEBUG_TAG, "onDown: " + event.toString());
+//            Log.d(DEBUG_TAG, "onDown: " + event.toString());
             return true;
         }
 
         @Override
         public boolean onFling(MotionEvent event1, MotionEvent event2,
                                float velocityX, float velocityY) {
-            Log.d(DEBUG_TAG, "onFling: " + event1.toString() + event2.toString());
+//            Log.d(DEBUG_TAG, "onFling: " + event1.toString() + event2.toString());
 
             if (indexMood < LIST_COLOR_IMG[0].length - 1 && event1.getY() - event2.getY() > SWIPE_MIN_DISTANCE) {
                 getSound(R.raw.smb_coin);
                 indexMood++;
                 mSmileyImg.setImageResource(LIST_COLOR_IMG[1][indexMood]);
                 mRelativeLayout.setBackgroundColor(getResources().getColor(LIST_COLOR_IMG[0][indexMood]));
+                setEmptyComment();
 
 
             } else if (indexMood > 0 && event2.getY() - event1.getY() > SWIPE_MIN_DISTANCE) {
@@ -170,6 +175,7 @@ public class MainActivity extends AppCompatActivity {
                 indexMood--;
                 mSmileyImg.setImageResource(LIST_COLOR_IMG[1][indexMood]);
                 mRelativeLayout.setBackgroundColor(getResources().getColor(LIST_COLOR_IMG[0][indexMood]));
+                setEmptyComment();
 
             } else
                 return false;
