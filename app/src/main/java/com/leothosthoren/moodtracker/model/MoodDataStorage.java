@@ -22,25 +22,27 @@ public class MoodDataStorage {
     public MoodDataStorage() {
     }
 
-    public static void saveData(Activity activity, ArrayList mArray) {
+    public static void saveData(Activity activity) {
+        ArrayList<ListMoodItem> mListMoodItems = new ArrayList<>();
         SharedPreferences sharedPreferences = activity.getSharedPreferences(SHARED_PREFERENCES, MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         Gson gson = new Gson();
-        String json = gson.toJson(mArray);
+        String json = gson.toJson(mListMoodItems);
         editor.putString(MOOD_DATA, json);
         editor.apply();
     }
 
-    public static void loadData(Activity activity, ArrayList mArray) {
+    public static void loadData(Activity activity) {
+        ArrayList<ListMoodItem> mListMoodItems;
         SharedPreferences sharedPreferences = activity.getSharedPreferences(SHARED_PREFERENCES, MODE_PRIVATE);
         Gson gson = new Gson();
         String json = sharedPreferences.getString(MOOD_DATA, null);
         Type type = new TypeToken<ArrayList<ListMoodItem>>() {
         }.getType();
-        mArray = gson.fromJson(json, type);
+        mListMoodItems = gson.fromJson(json, type);
 
-        if (mArray == null) {
-            mArray = new ArrayList<>();
+        if (mListMoodItems == null) {
+            mListMoodItems = new ArrayList<>();
         }
     }
 

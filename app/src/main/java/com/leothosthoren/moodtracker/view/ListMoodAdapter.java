@@ -1,14 +1,14 @@
 package com.leothosthoren.moodtracker.view;
 
+import android.app.Activity;
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
+import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.leothosthoren.moodtracker.R;
@@ -37,9 +37,10 @@ public class ListMoodAdapter extends RecyclerView.Adapter<ListMoodAdapter.ListMo
 
     @Override
     public ListMoodViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        int weight = 7;
+
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_history, parent, false);
-        view.getLayoutParams().height = parent.getHeight() / weight;
+        view.getLayoutParams().height = parent.getHeight() / mListMoodItems.size();
+        ;
         ListMoodViewHolder lmvh = new ListMoodViewHolder(view, mListener);
         return lmvh;
     }
@@ -57,19 +58,16 @@ public class ListMoodAdapter extends RecyclerView.Adapter<ListMoodAdapter.ListMo
             holder.mImageViewComment.setVisibility(View.GONE);
 
         //Gestion du layout
-        int formula = 20 * (currentItem.getSmileyValue() + 1) / 100;
+        int devicewidth;
+        DisplayMetrics displaymetrics = new DisplayMetrics();
+        ((Activity) mContext).getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
+        //if you need three fix imageview in width
+         devicewidth = (displaymetrics.widthPixels * 20 * (currentItem.getSmileyValue() + 1)) / 100;
 
+//        //if you need 4-5-6 anything fix imageview in height
+//        int deviceheight = displaymetrics.heightPixels / 4;
 
-//Revoir mon calcul de la taille et exploiter la méthode ci-dessous
-//        LinearLayout.LayoutParams params = new
-//                LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
-//                ViewGroup.LayoutParams.WRAP_CONTENT);
-//        // set height of RecyclerView
-//        params.width = ViewGroup.LayoutParams.MATCH_PARENT * (20 *(currentItem.getSmileyValue() +1))/100;
-//        holder.itemView.setLayoutParams(params);
-
-
-//        Log.d("widthlayout value", params +"");
+        holder.mFrameLayout.getLayoutParams().width = devicewidth;
 
     }
 

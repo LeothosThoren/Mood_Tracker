@@ -1,5 +1,9 @@
 package com.leothosthoren.moodtracker.controler;
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
+import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -39,7 +43,6 @@ public class HistoryActivity extends AppCompatActivity {
     String date = sdf1.format(now);
 
 
-
     private RecyclerView mRecyclerView;
     private ListMoodAdapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
@@ -52,8 +55,33 @@ public class HistoryActivity extends AppCompatActivity {
 
         loadData();
         buildRecyclerView();
+//        schedAlarm(this);
         setButton();
 
+    }
+
+    private void schedAlarm(Context context) {
+        Calendar cal = Calendar.getInstance();
+        cal.set(Calendar.HOUR_OF_DAY, 15);
+        cal.set(Calendar.MINUTE, 43);
+        cal.set(Calendar.SECOND, 0);
+        cal.set(Calendar.MILLISECOND, 0);
+        //cal.add(Calendar.DAY_OF_MONTH, 1);
+        PendingIntent pi = PendingIntent.getService(context, 0,
+                new Intent(context, HistoryActivity.class), PendingIntent.FLAG_UPDATE_CURRENT);
+        AlarmManager am = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
+        assert am != null;
+        am.setInexactRepeating(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(),
+                AlarmManager.INTERVAL_DAY, pi);
+
+        mListMoodItems.add(new ListMoodItem(
+                LIST_COLOR_IMG[0][indexMood],
+                indexMood,
+                comment,
+                R.drawable.ic_comment_black_48px,
+                date
+        ));
+        saveData();
     }
 
     public void saveData() {
@@ -117,17 +145,17 @@ public class HistoryActivity extends AppCompatActivity {
         mAdapter.notifyItemChanged(position);
     }
 
-    public String dateMaker(){
+    public String dateMaker() {
         int SECONDS_IN_A_DAY = 24 * 60 * 60;
 
         Calendar thatDay = Calendar.getInstance();
         thatDay.setTime(new Date(0)); /* reset */
-        thatDay.set(Calendar.DAY_OF_MONTH,1);
-        thatDay.set(Calendar.MONTH,0); // 0-11 so 1 less
+        thatDay.set(Calendar.DAY_OF_MONTH, 1);
+        thatDay.set(Calendar.MONTH, 0); // 0-11 so 1 less
 
 
         Calendar today = Calendar.getInstance();
-        long diff =  thatDay.getTimeInMillis() - today.getTimeInMillis();
+        long diff = thatDay.getTimeInMillis() - today.getTimeInMillis();
         long diffSec = diff / 1000;
 
         long days = diffSec / SECONDS_IN_A_DAY;
@@ -136,7 +164,7 @@ public class HistoryActivity extends AppCompatActivity {
         long minutes = (secondsDay / 60) % 60;
         long hours = (secondsDay / 3600); // % 24 not needed
 
-        return "Il y a " + days + " " +minutes + " " + seconds + " jours";
+        return "Il y a " + days + " " + minutes + " " + seconds + " jours";
     }
 
     private void buildRecyclerView() {

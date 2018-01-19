@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.support.v4.view.GestureDetectorCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
@@ -128,11 +127,10 @@ public class MainActivity extends AppCompatActivity {
     * */
     public void getSound(int sound) {
         MediaPlayer mediaPlayer = MediaPlayer.create(this, sound);
-//        MediaPlayer.create(this, sound);
         mediaPlayer.start();
     }
 
-    public void setEmptyComment (){
+    public void setEmptyComment() {
         comment = "";
     }
 
