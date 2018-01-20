@@ -36,14 +36,22 @@ public class ListMoodItem {
         return mBtnComment;
     }
 
-    public String getDate(int value) {
+    public String getDate() {
 
-        if (value == 0)
-            mDate = "Aujourd'hui";
-        else if (value == 1)
-            mDate = "Hier";
-        else
-            mDate = "il y a " + value + " jours";
+//        switch (value) {
+//            case 0:
+//                mDate = "Aujourd'hui";
+//                break;
+//            case 1:
+//                mDate = "Hier";
+//                break;
+//            case 7:
+//                mDate = "Il y a une semaine";
+//                break;
+//            default:
+//                mDate = "Il y a " + value + " jours";
+//                break;
+//        }
         return mDate;
     }
 

@@ -1,15 +1,10 @@
 package com.leothosthoren.moodtracker.controler;
 
-import android.app.AlarmManager;
-import android.app.PendingIntent;
-import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,12 +16,11 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.leothosthoren.moodtracker.R;
 import com.leothosthoren.moodtracker.model.ListMoodItem;
-import com.leothosthoren.moodtracker.view.ListMoodAdapter;
+import com.leothosthoren.moodtracker.view.MoodAdapter;
 
 import java.lang.reflect.Type;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Calendar;
+import java.util.Stack;
 import java.util.Date;
 import java.util.Locale;
 
@@ -39,16 +33,15 @@ public class HistoryActivity extends AppCompatActivity {
     public static final String SHARED_PREFERENCES = "SHARED_PREFERENCES";
     public static final String MOOD_DATA = "MOOD_DATA";
 
-    ArrayList<ListMoodItem> mListMoodItems = new ArrayList<>();
+    Stack<ListMoodItem> mListMoodItems = new Stack<>();
 
     Date now = new Date();
     Locale mLocale = Locale.FRANCE;
     SimpleDateFormat sdf1 = new SimpleDateFormat("HH:mm", mLocale);
-    String date = sdf1.format(now);
-
+    String d = sdf1.format(now);
 
     private RecyclerView mRecyclerView;
-    private ListMoodAdapter mAdapter;
+    private MoodAdapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
 
 
@@ -64,29 +57,29 @@ public class HistoryActivity extends AppCompatActivity {
 
     }
 
-    private void schedAlarm(Context context) {
-        Calendar cal = Calendar.getInstance();
-        cal.set(Calendar.HOUR_OF_DAY, 15);
-        cal.set(Calendar.MINUTE, 43);
-        cal.set(Calendar.SECOND, 0);
-        cal.set(Calendar.MILLISECOND, 0);
-        //cal.add(Calendar.DAY_OF_MONTH, 1);
-        PendingIntent pi = PendingIntent.getService(context, 0,
-                new Intent(context, HistoryActivity.class), PendingIntent.FLAG_UPDATE_CURRENT);
-        AlarmManager am = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
-        assert am != null;
-        am.setInexactRepeating(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(),
-                AlarmManager.INTERVAL_DAY, pi);
-
-        mListMoodItems.add(new ListMoodItem(
-                LIST_COLOR_IMG[0][indexMood],
-                indexMood,
-                comment,
-                R.drawable.ic_comment_black_48px,
-                date
-        ));
-        saveData();
-    }
+//    private void schedAlarm(Context context) {
+//        Calendar cal = Calendar.getInstance();
+//        cal.set(Calendar.HOUR_OF_DAY, 15);
+//        cal.set(Calendar.MINUTE, 43);
+//        cal.set(Calendar.SECOND, 0);
+//        cal.set(Calendar.MILLISECOND, 0);
+//        //cal.add(Calendar.DAY_OF_MONTH, 1);
+//        PendingIntent pi = PendingIntent.getService(context, 0,
+//                new Intent(context, HistoryActivity.class), PendingIntent.FLAG_UPDATE_CURRENT);
+//        AlarmManager am = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
+//        assert am != null;
+//        am.setInexactRepeating(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(),
+//                AlarmManager.INTERVAL_DAY, pi);
+//
+//        mListMoodItems.add(new ListMoodItem(
+//                LIST_COLOR_IMG[0][indexMood],
+//                indexMood,
+//                comment,
+//                R.drawable.ic_comment_black_48px,
+//                d
+//        ));
+//        saveData();
+//    }
 
     public void saveData() {
         SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFERENCES, MODE_PRIVATE);
@@ -100,12 +93,12 @@ public class HistoryActivity extends AppCompatActivity {
         SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFERENCES, MODE_PRIVATE);
         Gson gson = new Gson();
         String json = sharedPreferences.getString(MOOD_DATA, null);
-        Type type = new TypeToken<ArrayList<ListMoodItem>>() {
+        Type type = new TypeToken<Stack<ListMoodItem>>() {
         }.getType();
         mListMoodItems = gson.fromJson(json, type);
 
         if (mListMoodItems == null) {
-            mListMoodItems = new ArrayList<>();
+            mListMoodItems = new Stack<>();
         }
     }
 
@@ -129,7 +122,7 @@ public class HistoryActivity extends AppCompatActivity {
                         indexMood,
                         comment,
                         R.drawable.ic_comment_black_48px,
-                        date
+                        d
                 ));
                 saveData();
             }
@@ -159,40 +152,41 @@ public class HistoryActivity extends AppCompatActivity {
         mAdapter.notifyItemChanged(position);
     }
 
-    public String dateMaker() {
-        int SECONDS_IN_A_DAY = 24 * 60 * 60;
-
-        Calendar thatDay = Calendar.getInstance();
-        thatDay.setTime(new Date(0)); /* reset */
-        thatDay.set(Calendar.DAY_OF_MONTH, 1);
-        thatDay.set(Calendar.MONTH, 0); // 0-11 so 1 less
-
-
-        Calendar today = Calendar.getInstance();
-        long diff = thatDay.getTimeInMillis() - today.getTimeInMillis();
-        long diffSec = diff / 1000;
-
-        long days = diffSec / SECONDS_IN_A_DAY;
-        long secondsDay = diffSec % SECONDS_IN_A_DAY;
-        long seconds = secondsDay % 60;
-        long minutes = (secondsDay / 60) % 60;
-        long hours = (secondsDay / 3600); // % 24 not needed
-
-        return "Il y a " + days + " " + minutes + " " + seconds + " jours";
-    }
+//    public String dateMaker() {
+//        int SECONDS_IN_A_DAY = 24 * 60 * 60;
+//
+//        Calendar thatDay = Calendar.getInstance();
+//        thatDay.setTime(new Date(0)); /* reset */
+//        thatDay.set(Calendar.DAY_OF_MONTH, 1);
+//        thatDay.set(Calendar.MONTH, 0); // 0-11 so 1 less
+//
+//
+//        Calendar today = Calendar.getInstance();
+//        long diff = thatDay.getTimeInMillis() - today.getTimeInMillis();
+//        long diffSec = diff / 1000;
+//
+//        long days = diffSec / SECONDS_IN_A_DAY;
+//        long secondsDay = diffSec % SECONDS_IN_A_DAY;
+//        long seconds = secondsDay % 60;
+//        long minutes = (secondsDay / 60) % 60;
+//        long hours = (secondsDay / 3600); // % 24 not needed
+//
+//        return "Il y a " + days + " " + minutes + " " + seconds + " jours";
+//    }
 
     private void buildRecyclerView() {
         mRecyclerView = findViewById(R.id.recyclerView);
         mRecyclerView.setHasFixedSize(true);
         mLayoutManager = new LinearLayoutManager(this);
-        mAdapter = new ListMoodAdapter(mListMoodItems, this);
+        mAdapter = new MoodAdapter(mListMoodItems, this);
 
         mRecyclerView.setLayoutManager(mLayoutManager);
         mRecyclerView.setAdapter(mAdapter);
 
-        mAdapter.setOnItemClickListener(new ListMoodAdapter.OnItemClickListener() {
+        mAdapter.setOnItemClickListener(new MoodAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(int position) {
+                if (!mListMoodItems.get(position).getComment().equals(""))
                 toastMaker(position);
             }
         });

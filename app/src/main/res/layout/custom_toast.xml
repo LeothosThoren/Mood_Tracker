@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/custom_toast_container"
+    android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center_horizontal|bottom"
     android:background="@color/black"
-    android:padding="20dp">
+    >
 
     <TextView
         android:id="@+id/text"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="10dp"
-        android:textAlignment="center"
+        android:padding="15dp"
+        android:textAlignment="gravity"
         android:textColor="#FFF"
         android:textSize="20sp" />
 </LinearLayout>

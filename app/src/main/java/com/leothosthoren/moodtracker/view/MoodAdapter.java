@@ -7,26 +7,26 @@ import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.leothosthoren.moodtracker.R;
 import com.leothosthoren.moodtracker.model.ListMoodItem;
 
-import java.util.ArrayList;
+import java.util.Stack;
 
 /**
  * Created by Sofiane M. alias Leothos Thoren on 15/01/2018
  */
-public class ListMoodAdapter extends RecyclerView.Adapter<ListMoodAdapter.ListMoodViewHolder> {
+public class MoodAdapter extends RecyclerView.Adapter<MoodAdapter.ListMoodViewHolder> {
 
     private static final int NUMBER_ITEM = 8;
-    private ArrayList<ListMoodItem> mListMoodItems;
+    private Stack<ListMoodItem> mListMoodItems;
     private OnItemClickListener mListener;
     private Context mContext;
 
-    public ListMoodAdapter(ArrayList<ListMoodItem> listMoodItems, Context context) {
+    public MoodAdapter(Stack<ListMoodItem> listMoodItems, Context context) {
         mListMoodItems = listMoodItems;
         mContext = context;
     }
@@ -37,10 +37,8 @@ public class ListMoodAdapter extends RecyclerView.Adapter<ListMoodAdapter.ListMo
 
     @Override
     public ListMoodViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_history, parent, false);
         view.getLayoutParams().height = parent.getHeight() / mListMoodItems.size();
-        ;
         ListMoodViewHolder lmvh = new ListMoodViewHolder(view, mListener);
         return lmvh;
     }
@@ -49,8 +47,8 @@ public class ListMoodAdapter extends RecyclerView.Adapter<ListMoodAdapter.ListMo
     public void onBindViewHolder(ListMoodViewHolder holder, int position) {
         final ListMoodItem currentItem = mListMoodItems.get(position);
 
-        holder.mFrameLayout.setBackgroundResource(currentItem.getColor());
-        holder.mTextView.setText(currentItem.getDate(position));
+        holder.mRelativeLayout.setBackgroundResource(currentItem.getColor());
+        holder.mTextView.setText(currentItem.getDate());
         holder.mImageViewComment.setImageResource(currentItem.getBtnComment());
         holder.mToastView.setText(currentItem.getComment());
 
@@ -63,7 +61,7 @@ public class ListMoodAdapter extends RecyclerView.Adapter<ListMoodAdapter.ListMo
         //This variable take the width of the device and with the index value and a calculation
         //in percent the layout size is adjusting
         int devicewidth = (displaymetrics.widthPixels * 20 * (currentItem.getSmileyValue() + 1)) / 100;
-        holder.mFrameLayout.getLayoutParams().width = devicewidth;
+        holder.mRelativeLayout.getLayoutParams().width = devicewidth;
 
     }
 
@@ -80,7 +78,7 @@ public class ListMoodAdapter extends RecyclerView.Adapter<ListMoodAdapter.ListMo
     }
 
     public static class ListMoodViewHolder extends RecyclerView.ViewHolder {
-        public FrameLayout mFrameLayout;
+        public RelativeLayout mRelativeLayout;
         public TextView mTextView;
         public ImageView mImageViewComment;
         public TextView mToastView;
@@ -88,13 +86,13 @@ public class ListMoodAdapter extends RecyclerView.Adapter<ListMoodAdapter.ListMo
 
         private ListMoodViewHolder(View itemView, final OnItemClickListener listener) {
             super(itemView);
-            mFrameLayout = itemView.findViewById(R.id.item_history_layout);
+            mRelativeLayout = itemView.findViewById(R.id.item_history_layout);
             mTextView = itemView.findViewById(R.id.item_history_text);
             mImageViewComment = itemView.findViewById(R.id.item_history_commentBtn);
             mToastView = itemView.findViewById(R.id.item_history_toast);
 
 
-            mImageViewComment.setOnClickListener(new View.OnClickListener() {
+            itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     if (listener != null) {
