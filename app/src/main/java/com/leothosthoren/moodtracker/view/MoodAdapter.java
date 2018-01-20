@@ -14,6 +14,7 @@ import android.widget.TextView;
 import com.leothosthoren.moodtracker.R;
 import com.leothosthoren.moodtracker.model.ListMoodItem;
 
+import java.util.ArrayList;
 import java.util.Stack;
 
 /**
@@ -22,11 +23,11 @@ import java.util.Stack;
 public class MoodAdapter extends RecyclerView.Adapter<MoodAdapter.ListMoodViewHolder> {
 
     private static final int NUMBER_ITEM = 8;
-    private Stack<ListMoodItem> mListMoodItems;
+    private ArrayList<ListMoodItem> mListMoodItems;
     private OnItemClickListener mListener;
     private Context mContext;
 
-    public MoodAdapter(Stack<ListMoodItem> listMoodItems, Context context) {
+    public MoodAdapter(ArrayList<ListMoodItem> listMoodItems, Context context) {
         mListMoodItems = listMoodItems;
         mContext = context;
     }

@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
     public static String comment = "";
     public static int indexMood = 3;
     private GestureDetectorCompat mDetector;
+    private MediaPlayer mediaPlayer;
     //    private static final int SWIPE_MAX_OFF_PATH = 250;
 //    private static final int SWIPE_THRESHOLD_VELOCITY = 200;
 
@@ -126,8 +127,12 @@ public class MainActivity extends AppCompatActivity {
     * This method allow you to add sound or music in your app using MediaPlayer
     * */
     public void getSound(int sound) {
-        MediaPlayer mediaPlayer = MediaPlayer.create(this, sound);
+        mediaPlayer = MediaPlayer.create(this, sound);
         mediaPlayer.start();
+    }
+
+    public void soundReleased() {
+        mediaPlayer.release();
     }
 
     public void setEmptyComment() {
