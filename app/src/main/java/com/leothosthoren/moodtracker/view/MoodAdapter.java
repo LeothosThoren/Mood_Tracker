@@ -15,7 +15,6 @@ import com.leothosthoren.moodtracker.R;
 import com.leothosthoren.moodtracker.model.ListMoodItem;
 
 import java.util.ArrayList;
-import java.util.Stack;
 
 /**
  * Created by Sofiane M. alias Leothos Thoren on 15/01/2018
@@ -49,7 +48,7 @@ public class MoodAdapter extends RecyclerView.Adapter<MoodAdapter.ListMoodViewHo
         final ListMoodItem currentItem = mListMoodItems.get(position);
 
         holder.mRelativeLayout.setBackgroundResource(currentItem.getColor());
-        holder.mTextView.setText(currentItem.getDate());
+        holder.mTextView.setText(currentItem.getDate((mListMoodItems.size()-1) - position));
         holder.mImageViewComment.setImageResource(currentItem.getBtnComment());
         holder.mToastView.setText(currentItem.getComment());
 

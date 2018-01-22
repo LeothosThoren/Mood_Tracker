@@ -126,7 +126,7 @@ public class HistoryActivity extends AppCompatActivity {
                         indexMood,
                         comment,
                         R.drawable.ic_comment_black_48px,
-                        dateMaker()
+                        d
                 ));
                 saveData();
             }
@@ -156,20 +156,20 @@ public class HistoryActivity extends AppCompatActivity {
         mAdapter.notifyItemChanged(position);
     }
 
-    public String dateMaker() {
-
-        Date now = new Date();
-        Locale mLocale = Locale.FRANCE;
-        SimpleDateFormat sdf1 = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss", mLocale);
-        String d = sdf1.format(now);
-
-        Calendar rightNow = Calendar.getInstance();
-        int hour = rightNow.get(Calendar.HOUR_OF_DAY);
-        int minute = rightNow.get(Calendar.MINUTE);
-        int second = rightNow.get(Calendar.SECOND);
-
-        return "il y a "+ hour + " heure " + minute + "  minutes "+ second + " seconds.";
-    }
+//    public String dateMaker() {
+//
+//        Date now = new Date();
+//        Locale mLocale = Locale.FRANCE;
+//        SimpleDateFormat sdf1 = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss", mLocale);
+//        String d = sdf1.format(now);
+//
+//        Calendar rightNow = Calendar.getInstance();
+//        int hour = rightNow.get(Calendar.HOUR_OF_DAY);
+//        int minute = rightNow.get(Calendar.MINUTE);
+//        int second = rightNow.get(Calendar.SECOND);
+//
+//        return "il y a "+ hour + " heure " + minute + "  minutes "+ second + " seconds.";
+//    }
 
     private void buildRecyclerView() {
         mRecyclerView = findViewById(R.id.recyclerView);

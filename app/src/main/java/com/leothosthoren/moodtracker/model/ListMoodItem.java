@@ -36,27 +36,16 @@ public class ListMoodItem {
         return mBtnComment;
     }
 
-    public String getDate() {
+    public String getDate(int value) {
+        String dayTab[] = {"Hier", "Avant-hier",
+                "trois jours", "quatre jours", "cinq jours", "six jours", "une semaine"};
+        mDate = dayTab[value];
 
-//        switch (value) {
-//            case 0:
-//                mDate = "Aujourd'hui";
-//                break;
-//            case 1:
-//                mDate = "Hier";
-//                break;
-//            case 7:
-//                mDate = "Il y a une semaine";
-//                break;
-//            default:
-//                mDate = "Il y a " + value + " jours";
-//                break;
-//        }
+        if (value >= 2)
+            return "Il y a " + mDate;
+
         return mDate;
     }
 
-    public int getSize(int measuredWidth) {
-        return measuredWidth;
-    }
 
 }
