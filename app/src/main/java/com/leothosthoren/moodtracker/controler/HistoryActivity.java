@@ -1,5 +1,9 @@
 package com.leothosthoren.moodtracker.controler;
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -13,8 +17,11 @@ import android.widget.Toast;
 
 import com.leothosthoren.moodtracker.R;
 import com.leothosthoren.moodtracker.model.ListMoodItem;
+import com.leothosthoren.moodtracker.model.MoodAlarmReceiver;
 import com.leothosthoren.moodtracker.model.MoodDataStorage;
 import com.leothosthoren.moodtracker.view.MoodAdapter;
+
+import java.util.Calendar;
 
 import static com.leothosthoren.moodtracker.controler.MainActivity.LIST_COLOR_IMG;
 import static com.leothosthoren.moodtracker.controler.MainActivity.comment;
@@ -26,6 +33,8 @@ public class HistoryActivity extends AppCompatActivity {
     private RecyclerView mRecyclerView;
     private MoodAdapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
+    private PendingIntent mPendingIntent;
+    private AlarmManager mAlarmManager;
 
 
     @Override
@@ -35,37 +44,30 @@ public class HistoryActivity extends AppCompatActivity {
 
         MoodDataStorage.loadData(this);
         buildRecyclerView();
-//        schedAlarm(this);
         setButton();
+        schedAlarm(this);
+    }
+
+    private void schedAlarm(Context context) {
+        //The scheddule is set to be launch at midnight
+        Calendar cal = Calendar.getInstance();
+        cal.set(Calendar.HOUR_OF_DAY, 0);
+        cal.set(Calendar.MINUTE, 0);
+        cal.set(Calendar.SECOND, 0);
+//        cal.add(Calendar.DAY_OF_MONTH, 1);
+        // Retrieve a PendingIntent that will perform a broadcast
+        Intent alarmIntent = new Intent(context, MoodAlarmReceiver.class);
+        mPendingIntent = PendingIntent.getBroadcast(context, 0, alarmIntent, 0);
+        mAlarmManager = (AlarmManager)getSystemService(Context.ALARM_SERVICE);
+
+        mAlarmManager.setInexactRepeating(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), AlarmManager.INTERVAL_DAY, mPendingIntent);
 
     }
 
-//    private void schedAlarm(Context context) {
-//        Calendar cal = Calendar.getInstance();
-//        cal.set(Calendar.HOUR_OF_DAY, 15);
-//        cal.set(Calendar.MINUTE, 43);
-//        cal.set(Calendar.SECOND, 0);
-//        cal.set(Calendar.MILLISECOND, 0);
-//        //cal.add(Calendar.DAY_OF_MONTH, 1);
-//        PendingIntent pi = PendingIntent.getService(context, 0,
-//                new Intent(context, HistoryActivity.class), PendingIntent.FLAG_UPDATE_CURRENT);
-//        AlarmManager am = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
-//        assert am != null;
-//        am.setInexactRepeating(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(),
-//                AlarmManager.INTERVAL_DAY, pi);
-//
-//        mListMoodItems.add(new ListMoodItem(
-//                LIST_COLOR_IMG[0][indexMood],
-//                indexMood,
-//                comment,
-//                R.drawable.ic_comment_black_48px,
-//                d
-//        ));
-//        saveData();
-//    }
+
 
     public void setButton() {
-        //Button for testing sharepreferences
+        //Button for testing sharepreferences saving
         Button btnSave = (Button) findViewById(R.id.Btn_save);
         Button btnDelete = (Button) findViewById(R.id.Btn_delete);
 
@@ -108,7 +110,6 @@ public class HistoryActivity extends AppCompatActivity {
         mAdapter.notifyItemChanged(position);
     }
 
-
     private void buildRecyclerView() {
         mRecyclerView = findViewById(R.id.recyclerView);
         mRecyclerView.setHasFixedSize(true);
@@ -127,18 +128,4 @@ public class HistoryActivity extends AppCompatActivity {
         });
     }
 
-//    public String dateMaker() {
-//
-//        Date now = new Date();
-//        Locale mLocale = Locale.FRANCE;
-//        SimpleDateFormat sdf1 = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss", mLocale);
-//        String d = sdf1.format(now);
-//
-//        Calendar rightNow = Calendar.getInstance();
-//        int hour = rightNow.get(Calendar.HOUR_OF_DAY);
-//        int minute = rightNow.get(Calendar.MINUTE);
-//        int second = rightNow.get(Calendar.SECOND);
-//
-//        return "il y a "+ hour + " heure " + minute + "  minutes "+ second + " seconds.";
-//    }
 }

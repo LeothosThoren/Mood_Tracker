@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
     public static String comment = "";
     public static int indexMood = 3;
+
     private GestureDetectorCompat mDetector;
     private MediaPlayer mediaPlayer;
     //    private static final int SWIPE_MAX_OFF_PATH = 250;
@@ -131,10 +132,12 @@ public class MainActivity extends AppCompatActivity {
         mediaPlayer.start();
     }
 
-    public void soundReleased() {
-        mediaPlayer.release();
-    }
-
+    /*
+    * @setEmptyComment
+    *
+    * This method reset the comment every time the user swipe. Indeed it's impossible
+     * to have a previous comment which doesn't match with the previous mood
+    * */
     public void setEmptyComment() {
         comment = "";
     }
@@ -160,19 +163,31 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
 
+
+        /*
+        * @onFling method
+        * @event1 param
+        * @event2 param
+        *
+        * This method allow to swipe on the device. It gets the positions event1 and event2
+        * When finger moves event1 and 2 become two coordonnates and with the constant SWIPE_MIN_DISTANCE,
+         * we can handle the distance between these coordonnates
+        * */
         @Override
         public boolean onFling(MotionEvent event1, MotionEvent event2,
                                float velocityX, float velocityY) {
 //            Log.d(DEBUG_TAG, "onFling: " + event1.toString() + event2.toString());
 
+            //This condition handle when the user swipes the screen from bottom to the top
             if (indexMood < LIST_COLOR_IMG[0].length - 1 && event1.getY() - event2.getY() > SWIPE_MIN_DISTANCE) {
+                //Image, sound and background color change everytime you swipe in a direction
                 getSound(R.raw.smb_coin);
                 indexMood++;
                 mSmileyImg.setImageResource(LIST_COLOR_IMG[1][indexMood]);
                 mRelativeLayout.setBackgroundColor(getResources().getColor(LIST_COLOR_IMG[0][indexMood]));
                 setEmptyComment();
 
-
+                //This condition handle when the user swipes the screen from top to the bottom
             } else if (indexMood > 0 && event2.getY() - event1.getY() > SWIPE_MIN_DISTANCE) {
                 getSound(R.raw.smb_jump);
                 indexMood--;

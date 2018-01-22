@@ -21,7 +21,7 @@ import java.util.ArrayList;
  */
 public class MoodAdapter extends RecyclerView.Adapter<MoodAdapter.ListMoodViewHolder> {
 
-    private static final int NUMBER_ITEM = 8;
+    public static final int NUMBER_ITEM = 8;
     private ArrayList<ListMoodItem> mListMoodItems;
     private OnItemClickListener mListener;
     private Context mContext;
@@ -60,7 +60,8 @@ public class MoodAdapter extends RecyclerView.Adapter<MoodAdapter.ListMoodViewHo
         ((Activity) mContext).getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
         //This variable take the width of the device and with the index value and a calculation
         //in percent the layout size is adjusting
-        int devicewidth = (displaymetrics.widthPixels * 20 * (currentItem.getSmileyValue() + 1)) / 100;
+        int devicewidth;
+        devicewidth = (displaymetrics.widthPixels * 20 * (currentItem.getSmileyValue() + 1)) / 100;
         holder.mRelativeLayout.getLayoutParams().width = devicewidth;
 
     }

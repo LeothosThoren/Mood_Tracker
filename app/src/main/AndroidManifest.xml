@@ -16,7 +16,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".controler.HistoryActivity"></activity>
+        <activity android:name=".controler.HistoryActivity" />
+
+        <receiver
+            android:name=".model.MoodAlarmReceiver"
+            android:enabled="true"
+            android:exported="true"></receiver>
     </application>
 
 </manifest>

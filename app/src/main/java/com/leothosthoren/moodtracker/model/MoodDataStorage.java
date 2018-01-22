@@ -1,6 +1,7 @@
 package com.leothosthoren.moodtracker.model;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.SharedPreferences;
 
 import com.google.gson.Gson;
@@ -23,14 +24,7 @@ public class MoodDataStorage {
     public MoodDataStorage() {
     }
 
-    public static void saveData(Activity activity) {
-//        mListMoodItems.add(new ListMoodItem(
-//                LIST_COLOR_IMG[0][indexMood],
-//                indexMood,
-//                comment,
-//                R.drawable.ic_comment_black_48px,
-//                "date"
-//        ));
+    public static void saveData(Context activity) {
         SharedPreferences sharedPreferences = activity.getSharedPreferences(SHARED_PREFERENCES, MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         Gson gson = new Gson();
@@ -39,7 +33,7 @@ public class MoodDataStorage {
         editor.apply();
     }
 
-    public static void loadData(Activity activity) {
+    public static void loadData(Context activity) {
         SharedPreferences sharedPreferences = activity.getSharedPreferences(SHARED_PREFERENCES, MODE_PRIVATE);
         Gson gson = new Gson();
         String json = sharedPreferences.getString(MOOD_DATA, null);

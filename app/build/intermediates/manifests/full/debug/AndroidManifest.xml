@@ -26,6 +26,11 @@
         </activity>
         <activity android:name="com.leothosthoren.moodtracker.controler.HistoryActivity" />
 
+        <receiver
+            android:name="com.leothosthoren.moodtracker.model.MoodAlarmReceiver"
+            android:enabled="true"
+            android:exported="true" />
+
         <meta-data
             android:name="android.support.VERSION"
             android:value="26.1.0" />

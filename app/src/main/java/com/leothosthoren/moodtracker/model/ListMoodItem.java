@@ -47,5 +47,4 @@ public class ListMoodItem {
         return mDate;
     }
 
-
 }

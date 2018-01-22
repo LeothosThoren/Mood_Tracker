@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\_MyProjects\MobileAppDev\MoodTracker\app\src\main\AndroidManifest.xml:2:1-22:12
-INJECTED from D:\_MyProjects\MobileAppDev\MoodTracker\app\src\main\AndroidManifest.xml:2:1-22:12
-INJECTED from D:\_MyProjects\MobileAppDev\MoodTracker\app\src\main\AndroidManifest.xml:2:1-22:12
-INJECTED from D:\_MyProjects\MobileAppDev\MoodTracker\app\src\main\AndroidManifest.xml:2:1-22:12
+ADDED from D:\_MyProjects\MobileAppDev\MoodTracker\app\src\main\AndroidManifest.xml:2:1-27:12
+INJECTED from D:\_MyProjects\MobileAppDev\MoodTracker\app\src\main\AndroidManifest.xml:2:1-27:12
+INJECTED from D:\_MyProjects\MobileAppDev\MoodTracker\app\src\main\AndroidManifest.xml:2:1-27:12
+INJECTED from D:\_MyProjects\MobileAppDev\MoodTracker\app\src\main\AndroidManifest.xml:2:1-27:12
 MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\d6b5b98e436aec57acb829f892a27940\AndroidManifest.xml:17:1-28:12
 MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\ea79f4408b9893001bd9eab870353b96\AndroidManifest.xml:17:1-28:12
 MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\50fbfc8a76a336fa96d6b1f74b2c0892\AndroidManifest.xml:17:1-31:12
@@ -17,25 +17,25 @@ MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\Leothos T
 MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\d34dd62bad43a056aad7478b73ac67b0\AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:support-compat:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\d74cf568f953d74dfaff73ac6fb29eac\AndroidManifest.xml:17:1-31:12
 MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\ef89f6cd4700eeb295d79b30cc19e325\AndroidManifest.xml:17:1-30:12
-INJECTED from D:\_MyProjects\MobileAppDev\MoodTracker\app\src\main\AndroidManifest.xml:2:1-22:12
-INJECTED from D:\_MyProjects\MobileAppDev\MoodTracker\app\src\main\AndroidManifest.xml:2:1-22:12
-INJECTED from D:\_MyProjects\MobileAppDev\MoodTracker\app\src\main\AndroidManifest.xml:2:1-22:12
+INJECTED from D:\_MyProjects\MobileAppDev\MoodTracker\app\src\main\AndroidManifest.xml:2:1-27:12
+INJECTED from D:\_MyProjects\MobileAppDev\MoodTracker\app\src\main\AndroidManifest.xml:2:1-27:12
+INJECTED from D:\_MyProjects\MobileAppDev\MoodTracker\app\src\main\AndroidManifest.xml:2:1-27:12
 	package
 		ADDED from D:\_MyProjects\MobileAppDev\MoodTracker\app\src\main\AndroidManifest.xml:3:5-44
 		INJECTED from D:\_MyProjects\MobileAppDev\MoodTracker\app\src\main\AndroidManifest.xml
 		INJECTED from D:\_MyProjects\MobileAppDev\MoodTracker\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from D:\_MyProjects\MobileAppDev\MoodTracker\app\src\main\AndroidManifest.xml
-		ADDED from D:\_MyProjects\MobileAppDev\MoodTracker\app\src\main\AndroidManifest.xml:2:1-22:12
+		ADDED from D:\_MyProjects\MobileAppDev\MoodTracker\app\src\main\AndroidManifest.xml:2:1-27:12
 		INJECTED from D:\_MyProjects\MobileAppDev\MoodTracker\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from D:\_MyProjects\MobileAppDev\MoodTracker\app\src\main\AndroidManifest.xml
-		ADDED from D:\_MyProjects\MobileAppDev\MoodTracker\app\src\main\AndroidManifest.xml:2:1-22:12
+		ADDED from D:\_MyProjects\MobileAppDev\MoodTracker\app\src\main\AndroidManifest.xml:2:1-27:12
 		INJECTED from D:\_MyProjects\MobileAppDev\MoodTracker\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from D:\_MyProjects\MobileAppDev\MoodTracker\app\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from D:\_MyProjects\MobileAppDev\MoodTracker\app\src\main\AndroidManifest.xml:5:5-20:19
+ADDED from D:\_MyProjects\MobileAppDev\MoodTracker\app\src\main\AndroidManifest.xml:5:5-25:19
 MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\d6b5b98e436aec57acb829f892a27940\AndroidManifest.xml:22:5-26:19
 MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\d6b5b98e436aec57acb829f892a27940\AndroidManifest.xml:22:5-26:19
 MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\Leothos Thoren\.gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\ea79f4408b9893001bd9eab870353b96\AndroidManifest.xml:22:5-26:19
@@ -89,9 +89,17 @@ ADDED from D:\_MyProjects\MobileAppDev\MoodTracker\app\src\main\AndroidManifest.
 	android:name
 		ADDED from D:\_MyProjects\MobileAppDev\MoodTracker\app\src\main\AndroidManifest.xml:16:27-74
 activity#com.leothosthoren.moodtracker.controler.HistoryActivity
-ADDED from D:\_MyProjects\MobileAppDev\MoodTracker\app\src\main\AndroidManifest.xml:19:9-72
+ADDED from D:\_MyProjects\MobileAppDev\MoodTracker\app\src\main\AndroidManifest.xml:19:9-63
 	android:name
 		ADDED from D:\_MyProjects\MobileAppDev\MoodTracker\app\src\main\AndroidManifest.xml:19:19-60
+receiver#com.leothosthoren.moodtracker.model.MoodAlarmReceiver
+ADDED from D:\_MyProjects\MobileAppDev\MoodTracker\app\src\main\AndroidManifest.xml:21:9-24:48
+	android:enabled
+		ADDED from D:\_MyProjects\MobileAppDev\MoodTracker\app\src\main\AndroidManifest.xml:23:13-35
+	android:exported
+		ADDED from D:\_MyProjects\MobileAppDev\MoodTracker\app\src\main\AndroidManifest.xml:24:13-36
+	android:name
+		ADDED from D:\_MyProjects\MobileAppDev\MoodTracker\app\src\main\AndroidManifest.xml:22:13-52
 uses-sdk
 INJECTED from D:\_MyProjects\MobileAppDev\MoodTracker\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\_MyProjects\MobileAppDev\MoodTracker\app\src\main\AndroidManifest.xml
