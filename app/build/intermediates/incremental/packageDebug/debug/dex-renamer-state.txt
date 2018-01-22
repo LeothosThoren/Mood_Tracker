@@ -1,4 +1,4 @@
-#Mon Jan 22 11:57:51 CET 2018
+#Mon Jan 22 13:23:07 CET 2018
 base.0=D\:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\95
 path.0=classes.dex
 renamed.0=classes.dex

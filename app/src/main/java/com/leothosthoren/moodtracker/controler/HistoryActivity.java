@@ -1,6 +1,5 @@
 package com.leothosthoren.moodtracker.controler;
 
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -12,37 +11,17 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
 import com.leothosthoren.moodtracker.R;
 import com.leothosthoren.moodtracker.model.ListMoodItem;
+import com.leothosthoren.moodtracker.model.MoodDataStorage;
 import com.leothosthoren.moodtracker.view.MoodAdapter;
-
-import java.lang.reflect.Type;
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.time.temporal.ChronoUnit;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.Locale;
 
 import static com.leothosthoren.moodtracker.controler.MainActivity.LIST_COLOR_IMG;
 import static com.leothosthoren.moodtracker.controler.MainActivity.comment;
 import static com.leothosthoren.moodtracker.controler.MainActivity.indexMood;
+import static com.leothosthoren.moodtracker.model.MoodDataStorage.mListMoodItems;
 
 public class HistoryActivity extends AppCompatActivity {
-
-    public static final String SHARED_PREFERENCES = "SHARED_PREFERENCES";
-    public static final String MOOD_DATA = "MOOD_DATA";
-
-    ArrayList<ListMoodItem> mListMoodItems = new ArrayList<>();
-
-    Date now = new Date();
-    Locale mLocale = Locale.FRANCE;
-    SimpleDateFormat sdf1 = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss", mLocale);
-    String d = sdf1.format(now);
 
     private RecyclerView mRecyclerView;
     private MoodAdapter mAdapter;
@@ -54,7 +33,7 @@ public class HistoryActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_history);
 
-        loadData();
+        MoodDataStorage.loadData(this);
         buildRecyclerView();
 //        schedAlarm(this);
         setButton();
@@ -85,33 +64,6 @@ public class HistoryActivity extends AppCompatActivity {
 //        saveData();
 //    }
 
-    public void saveData() {
-        SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFERENCES, MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        Gson gson = new Gson();
-        String json = gson.toJson(mListMoodItems);
-        editor.putString(MOOD_DATA, json).apply();
-    }
-
-    public void loadData() {
-        SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFERENCES, MODE_PRIVATE);
-        Gson gson = new Gson();
-        String json = sharedPreferences.getString(MOOD_DATA, null);
-        Type type = new TypeToken<ArrayList<ListMoodItem>>() {
-        }.getType();
-        mListMoodItems = gson.fromJson(json, type);
-
-        if (mListMoodItems == null) {
-            mListMoodItems = new ArrayList<>();
-        }
-    }
-
-    public void clearData() {
-        SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFERENCES, MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.clear().apply();
-    }
-
     public void setButton() {
         //Button for testing sharepreferences
         Button btnSave = (Button) findViewById(R.id.Btn_save);
@@ -126,16 +78,16 @@ public class HistoryActivity extends AppCompatActivity {
                         indexMood,
                         comment,
                         R.drawable.ic_comment_black_48px,
-                        d
+                        "date"
                 ));
-                saveData();
+                MoodDataStorage.saveData(HistoryActivity.this);
             }
         });
 
         btnDelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                clearData();
+                MoodDataStorage.clearData(HistoryActivity.this);
             }
         });
     }
@@ -156,20 +108,6 @@ public class HistoryActivity extends AppCompatActivity {
         mAdapter.notifyItemChanged(position);
     }
 
-//    public String dateMaker() {
-//
-//        Date now = new Date();
-//        Locale mLocale = Locale.FRANCE;
-//        SimpleDateFormat sdf1 = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss", mLocale);
-//        String d = sdf1.format(now);
-//
-//        Calendar rightNow = Calendar.getInstance();
-//        int hour = rightNow.get(Calendar.HOUR_OF_DAY);
-//        int minute = rightNow.get(Calendar.MINUTE);
-//        int second = rightNow.get(Calendar.SECOND);
-//
-//        return "il y a "+ hour + " heure " + minute + "  minutes "+ second + " seconds.";
-//    }
 
     private void buildRecyclerView() {
         mRecyclerView = findViewById(R.id.recyclerView);
@@ -189,5 +127,18 @@ public class HistoryActivity extends AppCompatActivity {
         });
     }
 
-
+//    public String dateMaker() {
+//
+//        Date now = new Date();
+//        Locale mLocale = Locale.FRANCE;
+//        SimpleDateFormat sdf1 = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss", mLocale);
+//        String d = sdf1.format(now);
+//
+//        Calendar rightNow = Calendar.getInstance();
+//        int hour = rightNow.get(Calendar.HOUR_OF_DAY);
+//        int minute = rightNow.get(Calendar.MINUTE);
+//        int second = rightNow.get(Calendar.SECOND);
+//
+//        return "il y a "+ hour + " heure " + minute + "  minutes "+ second + " seconds.";
+//    }
 }
