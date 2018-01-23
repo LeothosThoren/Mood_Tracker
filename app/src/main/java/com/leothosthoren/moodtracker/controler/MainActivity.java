@@ -1,5 +1,8 @@
 package com.leothosthoren.moodtracker.controler;
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.media.MediaPlayer;
@@ -16,6 +19,9 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 import com.leothosthoren.moodtracker.R;
+import com.leothosthoren.moodtracker.model.MoodAlarmReceiver;
+
+import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -46,6 +52,9 @@ public class MainActivity extends AppCompatActivity {
     private ImageButton mBtnHistory;
     private ImageView mSmileyImg;
     private RelativeLayout mRelativeLayout;
+    private PendingIntent mPendingIntent;
+    private AlarmManager mAlarmManager;
+
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
@@ -57,6 +66,9 @@ public class MainActivity extends AppCompatActivity {
         mSmileyImg = (ImageView) findViewById(R.id.main_activity_img);
         mRelativeLayout = (RelativeLayout) findViewById(R.id.main_activity_layout_backgound);
         mDetector = new GestureDetectorCompat(this, new MyGestureListener());
+
+        //The alarm is launched
+//        schedAlarm(this);
 
         /*
         *@mBtnComments
@@ -125,7 +137,7 @@ public class MainActivity extends AppCompatActivity {
     * @getSound method
     * @sound parameter
     *
-    * This method allow you to add sound or music in your app using MediaPlayer
+    * This method allow you to add sound or music from raw folder in your app by using MediaPlayer
     * */
     public void getSound(int sound) {
         mediaPlayer = MediaPlayer.create(this, sound);
@@ -136,12 +148,35 @@ public class MainActivity extends AppCompatActivity {
     * @setEmptyComment
     *
     * This method reset the comment every time the user swipe. Indeed it's impossible
-     * to have a previous comment which doesn't match with the previous mood
+     * to have a previous comment which doesn't match with the next mood
     * */
     public void setEmptyComment() {
         comment = "";
     }
 
+    /*
+    * @schedAlarm method
+    * @context param
+    *
+    * This method call the alarm service to perform a Task every day at midnight
+    * The operation to perform is in MoodAlarmReceiver class
+    * */
+    private void schedAlarm(Context context) {
+        //The scheddule is set to be launch at midnight
+        Calendar cal = Calendar.getInstance();
+        cal.set(Calendar.HOUR_OF_DAY, 0);
+        cal.set(Calendar.MINUTE, 0);
+        cal.set(Calendar.SECOND, 0);
+        cal.add(Calendar.DATE, 1);
+
+        // Retrieve a PendingIntent that will perform a broadcast
+        Intent alarmIntent = new Intent(context, MoodAlarmReceiver.class);
+        int interval = 10000;
+        mPendingIntent = PendingIntent.getBroadcast(context, 0, alarmIntent, 0);
+        mAlarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
+        //Above we prepare pending intent and Alarm manager, then the alarm is triggered
+        mAlarmManager.setInexactRepeating(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), AlarmManager.INTERVAL_DAY, mPendingIntent);
+    }
 
     /*
     * Class which manage the swipe gesture
@@ -149,7 +184,6 @@ public class MainActivity extends AppCompatActivity {
     * A sound is perform too. It indicates the user whether it's from the top or from the bottom
     * */
     class MyGestureListener extends GestureDetector.SimpleOnGestureListener {
-        private static final String DEBUG_TAG = "Gestures";
 
         /*
         * @onDown method
@@ -159,7 +193,6 @@ public class MainActivity extends AppCompatActivity {
         * */
         @Override
         public boolean onDown(MotionEvent event) {
-//            Log.d(DEBUG_TAG, "onDown: " + event.toString());
             return true;
         }
 
@@ -170,17 +203,16 @@ public class MainActivity extends AppCompatActivity {
         * @event2 param
         *
         * This method allow to swipe on the device. It gets the positions event1 and event2
-        * When finger moves event1 and 2 become two coordonnates and with the constant SWIPE_MIN_DISTANCE,
-         * we can handle the distance between these coordonnates
+        * When finger moves event1 and 2 become two coordinates and with the constant SWIPE_MIN_DISTANCE,
+         * we can handle the distance between those coordinates
         * */
         @Override
         public boolean onFling(MotionEvent event1, MotionEvent event2,
                                float velocityX, float velocityY) {
-//            Log.d(DEBUG_TAG, "onFling: " + event1.toString() + event2.toString());
 
             //This condition handle when the user swipes the screen from bottom to the top
             if (indexMood < LIST_COLOR_IMG[0].length - 1 && event1.getY() - event2.getY() > SWIPE_MIN_DISTANCE) {
-                //Image, sound and background color change everytime you swipe in a direction
+                //Image, sound and background color change every time you swipe in a direction
                 getSound(R.raw.smb_coin);
                 indexMood++;
                 mSmileyImg.setImageResource(LIST_COLOR_IMG[1][indexMood]);

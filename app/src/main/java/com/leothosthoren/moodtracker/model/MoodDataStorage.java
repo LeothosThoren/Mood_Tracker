@@ -14,16 +14,26 @@ import static android.content.Context.MODE_PRIVATE;
 
 /**
  * Created by Sofiane M. alias Leothos Thoren on 16/01/2018
+ * MoodDataStorage is a class who handle with the shared preferences and data
  */
 public class MoodDataStorage {
 
-    public static final String SHARED_PREFERENCES = "SHARED_PREFERENCES";
-    public static final String MOOD_DATA = "MOOD_DATA";
+    //Constants for shared preferences
+    private static final String SHARED_PREFERENCES = "SHARED_PREFERENCES";
+    private static final String MOOD_DATA = "MOOD_DATA";
+
     public static ArrayList<ListMoodItem> mListMoodItems = new ArrayList<>();
 
+    //Default constructor
     public MoodDataStorage() {
     }
 
+    /*
+    * @saveData method
+    * @activity param context of the activity
+    *
+    * This method allow to save array in shared preferences using Gson library
+    * */
     public static void saveData(Context activity) {
         SharedPreferences sharedPreferences = activity.getSharedPreferences(SHARED_PREFERENCES, MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
@@ -33,6 +43,12 @@ public class MoodDataStorage {
         editor.apply();
     }
 
+    /*
+   * @loadData method
+   * @activity param context of the activity
+   *
+   * This method allow to load array from shared preferences using Gson library
+   * */
     public static void loadData(Context activity) {
         SharedPreferences sharedPreferences = activity.getSharedPreferences(SHARED_PREFERENCES, MODE_PRIVATE);
         Gson gson = new Gson();
@@ -46,6 +62,12 @@ public class MoodDataStorage {
         }
     }
 
+    /*
+   * @clear method
+   * @activity param context of the activity
+   *
+   * This method allow to clear data from shared preferences (useful when you need to reset the view)
+   * */
     public static void clearData(Activity activity) {
         SharedPreferences sharedPreferences = activity.getSharedPreferences(SHARED_PREFERENCES, MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();

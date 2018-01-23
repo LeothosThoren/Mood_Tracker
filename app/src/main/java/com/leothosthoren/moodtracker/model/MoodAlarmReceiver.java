@@ -12,27 +12,41 @@ import static com.leothosthoren.moodtracker.controler.MainActivity.indexMood;
 import static com.leothosthoren.moodtracker.model.MoodDataStorage.mListMoodItems;
 import static com.leothosthoren.moodtracker.view.MoodAdapter.NUMBER_ITEM;
 
+/**
+ * This class is the useful to receive intents,
+ * broadcast receiver performs an operation when the alarm is fired/triggered.
+ */
+
 public class MoodAlarmReceiver extends BroadcastReceiver {
 
     @Override
     public void onReceive(Context context, Intent intent) {
         // TODO: This method is called when the BroadcastReceiver is receiving
-        // an Intent broadcast.
+        //We check the array size and remove first index when the limit is reached
         if (mListMoodItems.size() == NUMBER_ITEM)
             mListMoodItems.remove(0);
 
-        mListMoodItems.add(new ListMoodItem(
-                LIST_COLOR_IMG[0][indexMood],
-                indexMood,
-                comment,
-                R.drawable.ic_comment_black_48px,
-                "date"
-        ));
-        MoodDataStorage.saveData(context);
-
+        //We add each day an another item with his content
+        if (mListMoodItems.size() < NUMBER_ITEM) {
+            mListMoodItems.add(new ListMoodItem(
+                    LIST_COLOR_IMG[0][indexMood],
+                    indexMood,
+                    comment,
+                    R.drawable.ic_comment_black_48px,
+                    "date"
+            ));
+            //Here we call the saveData method include in the MoodDataStorage class
+            MoodDataStorage.saveData(context);
+        }
         resetMoodEachDay();
     }
 
+    /*
+    * @resetMoodEachDay method
+    *
+    * This method reset comment and index to theirs originals status
+    * Every time the data is saved we call this method to get the app at his standard state
+    * */
     public void resetMoodEachDay() {
         comment = "";
         indexMood = 3;
