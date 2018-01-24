@@ -34,7 +34,6 @@ public class MoodAdapter extends RecyclerView.Adapter<MoodAdapter.ListMoodViewHo
 
     /*
     * @setOnItemClickListener method
-    *
     * @listener param  you can call View.OnClickListener()
      *
      * This method handle the click on items parent or/and their child
@@ -54,7 +53,7 @@ public class MoodAdapter extends RecyclerView.Adapter<MoodAdapter.ListMoodViewHo
         //Here we inflate the xml layout
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_history, parent, false);
         //Each sub layout height is adapting with the parent (device height) we divide the screen by seven (nbr of day in week)
-        view.getLayoutParams().height = parent.getHeight() / weight;
+        view.getLayoutParams().height = parent.getHeight() / mListMoodItems.size();
         //Initialize a new class wih all the data holding
         ListMoodViewHolder lmvh = new ListMoodViewHolder(view, mListener);
         return lmvh;
@@ -115,10 +114,10 @@ public class MoodAdapter extends RecyclerView.Adapter<MoodAdapter.ListMoodViewHo
         //the layout width size is adjusting
         int deviceWidth, deviceHeight;
         deviceWidth = (displaymetrics.widthPixels * 20 * (currentItem.getSmileyValue() + 1)) / 100;
-//        deviceHeight = (displaymetrics.heightPixels / mListMoodItems.size()-1);
+        deviceHeight = (displaymetrics.heightPixels / mListMoodItems.size()-1);
         //Here we initiate the new width to each item layout
         holder.mRelativeLayout.getLayoutParams().width = deviceWidth;
-//        holder.mRelativeLayout.getLayoutParams().height = deviceHeight;
+        holder.mRelativeLayout.getLayoutParams().height = deviceHeight;
     }
 
     //This interface provide onItemClick method which allow to click on something in the activities class

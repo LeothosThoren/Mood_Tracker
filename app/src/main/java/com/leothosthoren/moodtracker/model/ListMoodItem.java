@@ -3,7 +3,7 @@ package com.leothosthoren.moodtracker.model;
 
 /**
  * Created by Sofiane M. alias Leothos Thoren on 13/01/2018
- * 
+ *
  * These constructor and methods are the bases of the adapter and the view and the array's data
  * All elements that we stored in the array is used to be showed thanks the recycler view and his adapter
  * We stored all the data which are set from all the items to their content

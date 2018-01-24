@@ -13,6 +13,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.LinearInterpolator;
+import android.view.animation.TranslateAnimation;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -55,6 +58,10 @@ public class MainActivity extends AppCompatActivity {
     private PendingIntent mPendingIntent;
     private AlarmManager mAlarmManager;
 
+    private ImageView mArrowUp;
+    private ImageView mArrowDown;
+    private Animation anim;
+
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
@@ -66,9 +73,12 @@ public class MainActivity extends AppCompatActivity {
         mSmileyImg = (ImageView) findViewById(R.id.main_activity_img);
         mRelativeLayout = (RelativeLayout) findViewById(R.id.main_activity_layout_backgound);
         mDetector = new GestureDetectorCompat(this, new MyGestureListener());
+        mArrowUp = (ImageView) findViewById(R.id.main_activity_arrow_up);
+        mArrowDown = (ImageView) findViewById(R.id.main_activity_arrow_down);
+
 
         //The alarm is launched
-//        schedAlarm(this);
+        schedAlarm(this);
 
         /*
         *@mBtnComments
@@ -171,11 +181,28 @@ public class MainActivity extends AppCompatActivity {
 
         // Retrieve a PendingIntent that will perform a broadcast
         Intent alarmIntent = new Intent(context, MoodAlarmReceiver.class);
-        int interval = 10000;
+//        int interval = 10000;
         mPendingIntent = PendingIntent.getBroadcast(context, 0, alarmIntent, 0);
         mAlarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
         //Above we prepare pending intent and Alarm manager, then the alarm is triggered
         mAlarmManager.setInexactRepeating(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), AlarmManager.INTERVAL_DAY, mPendingIntent);
+    }
+
+    /*
+    * @verticalTranslate method
+    * @v param
+    * @toYDelta param the direction toward the view translate
+    *
+    * This method translate an image view (white arrows in this case) to indicate
+     * the user the possibility to slide or scroll the screen up or down
+    * */
+    public void verticalTranslate(View v, float toYDelta) {
+        anim = new TranslateAnimation(0f, 0f, 0f, toYDelta);
+        anim.setDuration(1000);
+        anim.setRepeatCount(-1);
+        anim.setRepeatMode(Animation.REVERSE);
+        anim.setInterpolator(new LinearInterpolator());
+        v.startAnimation(anim);
     }
 
     /*
@@ -193,6 +220,9 @@ public class MainActivity extends AppCompatActivity {
         * */
         @Override
         public boolean onDown(MotionEvent event) {
+            verticalTranslate(mArrowUp, -50.0f);
+            verticalTranslate(mArrowDown, 50.0f);
+
             return true;
         }
 
