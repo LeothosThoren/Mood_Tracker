@@ -220,8 +220,8 @@ public class MainActivity extends AppCompatActivity {
         * */
         @Override
         public boolean onDown(MotionEvent event) {
-            verticalTranslate(mArrowUp, -50.0f);
-            verticalTranslate(mArrowDown, 50.0f);
+            verticalTranslate(mArrowUp, -25.0f);
+            verticalTranslate(mArrowDown, 25.0f);
 
             return true;
         }

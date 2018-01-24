@@ -19,9 +19,17 @@ import static com.leothosthoren.moodtracker.view.MoodAdapter.NUMBER_ITEM;
 
 public class MoodAlarmReceiver extends BroadcastReceiver {
 
+
+    /*
+    * @onReceive method
+    * @context param
+    * @intent param
+    * 
+    * This method is called when the BroadcastReceiver is receiving
+    * */
     @Override
     public void onReceive(Context context, Intent intent) {
-        // TODO: This method is called when the BroadcastReceiver is receiving
+
         //We check the array size and remove first index when the limit is reached
         if (mListMoodItems.size() == NUMBER_ITEM)
             mListMoodItems.remove(0);
