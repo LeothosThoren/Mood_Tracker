@@ -24,9 +24,14 @@ import static com.leothosthoren.moodtracker.view.MoodAdapter.NUMBER_ITEM;
 
 public class HistoryActivity extends AppCompatActivity {
 
+    //switch to true if you want to enable the developer/debug mode
+    private final boolean DEV_MODE = false;
+
     private RecyclerView mRecyclerView;
     private MoodAdapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
+    private Button btnDelete;
+    private Button btnSave;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,8 +49,13 @@ public class HistoryActivity extends AppCompatActivity {
 
     //Button for testing shared preferences saving and delete not needed in the app
     public void setButton() {
-        Button btnSave = (Button) findViewById(R.id.Btn_save);
-        Button btnDelete = (Button) findViewById(R.id.Btn_delete);
+         btnSave = (Button) findViewById(R.id.Btn_save);
+         btnDelete = (Button) findViewById(R.id.Btn_delete);
+
+        if (!DEV_MODE) {
+            btnSave.setVisibility(View.GONE);
+            btnDelete.setVisibility(View.GONE);
+        }
 
         /**Series of button for test**/
         btnSave.setOnClickListener(new View.OnClickListener() {

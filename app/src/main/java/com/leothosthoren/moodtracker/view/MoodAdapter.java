@@ -49,7 +49,6 @@ public class MoodAdapter extends RecyclerView.Adapter<MoodAdapter.ListMoodViewHo
      */
     @Override
     public ListMoodViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        int weight = 7;
         //Here we inflate the xml layout
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_history, parent, false);
         //Each sub layout height is adapting with the parent (device height) we divide the screen by seven (nbr of day in week)
@@ -114,10 +113,10 @@ public class MoodAdapter extends RecyclerView.Adapter<MoodAdapter.ListMoodViewHo
         //the layout width size is adjusting
         int deviceWidth, deviceHeight;
         deviceWidth = (displaymetrics.widthPixels * 20 * (currentItem.getSmileyValue() + 1)) / 100;
-        deviceHeight = (displaymetrics.heightPixels / mListMoodItems.size()-1);
+//        deviceHeight = (displaymetrics.heightPixels / mListMoodItems.size()-1);
         //Here we initiate the new width to each item layout
         holder.mRelativeLayout.getLayoutParams().width = deviceWidth;
-        holder.mRelativeLayout.getLayoutParams().height = deviceHeight;
+//        holder.mRelativeLayout.getLayoutParams().height = deviceHeight;
     }
 
     //This interface provide onItemClick method which allow to click on something in the activities class
@@ -129,7 +128,6 @@ public class MoodAdapter extends RecyclerView.Adapter<MoodAdapter.ListMoodViewHo
     /**
      * This class work with the adapter
      * It's necessary to hold each elements of the main layout
-     * <p>
      * This class allow to call them directly in the adapter for better performance
      */
     public static class ListMoodViewHolder extends RecyclerView.ViewHolder {

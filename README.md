@@ -10,9 +10,10 @@ These instructions will get you a copy of the project up and running on your loc
 
 What things you need to install the software and how to install them
 
-```
-You need Android Studio and the latest SDK, you may need an mobile emulator too (use Nox software for example), otherwise you can use your mobile phone directly
-```
+- [x] You need Android Studio 
+- [x] The latest SDK with at least Android Kiktkat 4.4 (API 19)
+- [x] You may need an mobile emulator too (use Nox software for example)
+- [x] Otherwise you can use your mobile phone directly
 
 ## Running the tests
 
@@ -32,8 +33,6 @@ I use [Git and Github](https://gist.github.com/) for versioning.
 ## Authors
 
 * **Sofiane M.** - *Alias Leothos* - [LeothosThoren](https://github.com/LeothosThoren)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
 ## License
 
