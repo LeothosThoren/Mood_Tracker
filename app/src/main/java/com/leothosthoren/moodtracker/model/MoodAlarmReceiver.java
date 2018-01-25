@@ -24,7 +24,7 @@ public class MoodAlarmReceiver extends BroadcastReceiver {
     * @onReceive method
     * @context param
     * @intent param
-    * 
+    *
     * This method is called when the BroadcastReceiver is receiving
     * */
     @Override

@@ -41,23 +41,20 @@ public class MainActivity extends AppCompatActivity {
                     R.drawable.smiley_happy,
                     R.drawable.smiley_super_happy}};
 
-    private static final int SWIPE_MIN_DISTANCE = 150;
+    private static final int SWIPE_MIN_DISTANCE = 130;
+    private static final int SWIPE_THRESHOLD_VELOCITY = 200;
 
     public static String comment = "";
     public static int indexMood = 3;
 
     private GestureDetectorCompat mDetector;
     private MediaPlayer mediaPlayer;
-    //    private static final int SWIPE_MAX_OFF_PATH = 250;
-//    private static final int SWIPE_THRESHOLD_VELOCITY = 200;
-
     private ImageButton mBtnComment;
     private ImageButton mBtnHistory;
     private ImageView mSmileyImg;
     private RelativeLayout mRelativeLayout;
     private PendingIntent mPendingIntent;
     private AlarmManager mAlarmManager;
-
     private ImageView mArrowUp;
     private ImageView mArrowDown;
     private Animation anim;
@@ -78,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         //The alarm is launched
-        schedAlarm(this);
+        schedulerAlarm(this);
 
         /*
         *@mBtnComments
@@ -171,17 +168,15 @@ public class MainActivity extends AppCompatActivity {
     * This method call the alarm service to perform a Task every day at midnight
     * The operation to perform is in MoodAlarmReceiver class
     * */
-    private void schedAlarm(Context context) {
-        //The scheddule is set to be launch at midnight
+    private void schedulerAlarm(Context context) {
+        // The schedule is set to be launch at midnight
         Calendar cal = Calendar.getInstance();
         cal.set(Calendar.HOUR_OF_DAY, 0);
         cal.set(Calendar.MINUTE, 0);
         cal.set(Calendar.SECOND, 0);
-        cal.add(Calendar.DATE, 1);
 
         // Retrieve a PendingIntent that will perform a broadcast
         Intent alarmIntent = new Intent(context, MoodAlarmReceiver.class);
-//        int interval = 10000;
         mPendingIntent = PendingIntent.getBroadcast(context, 0, alarmIntent, 0);
         mAlarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
         //Above we prepare pending intent and Alarm manager, then the alarm is triggered
@@ -198,7 +193,7 @@ public class MainActivity extends AppCompatActivity {
     * */
     public void verticalTranslate(View v, float toYDelta) {
         anim = new TranslateAnimation(0f, 0f, 0f, toYDelta);
-        anim.setDuration(1000);
+        anim.setDuration(900);
         anim.setRepeatCount(-1);
         anim.setRepeatMode(Animation.REVERSE);
         anim.setInterpolator(new LinearInterpolator());
@@ -241,7 +236,8 @@ public class MainActivity extends AppCompatActivity {
                                float velocityX, float velocityY) {
 
             //This condition handle when the user swipes the screen from bottom to the top
-            if (indexMood < LIST_COLOR_IMG[0].length - 1 && event1.getY() - event2.getY() > SWIPE_MIN_DISTANCE) {
+            if (indexMood < LIST_COLOR_IMG[0].length - 1 && event1.getY() - event2.getY() > SWIPE_MIN_DISTANCE
+                    && event1.getY() - event2.getY() > SWIPE_THRESHOLD_VELOCITY) {
                 //Image, sound and background color change every time you swipe in a direction
                 getSound(R.raw.smb_coin);
                 indexMood++;
@@ -250,7 +246,8 @@ public class MainActivity extends AppCompatActivity {
                 setEmptyComment();
 
                 //This condition handle when the user swipes the screen from top to the bottom
-            } else if (indexMood > 0 && event2.getY() - event1.getY() > SWIPE_MIN_DISTANCE) {
+            } else if (indexMood > 0 && event2.getY() - event1.getY() > SWIPE_MIN_DISTANCE
+                    && event2.getY() - event1.getY() > SWIPE_THRESHOLD_VELOCITY) {
                 getSound(R.raw.smb_jump);
                 indexMood--;
                 mSmileyImg.setImageResource(LIST_COLOR_IMG[1][indexMood]);
