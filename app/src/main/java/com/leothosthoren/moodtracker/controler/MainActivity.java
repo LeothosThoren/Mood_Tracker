@@ -174,7 +174,7 @@ public class MainActivity extends AppCompatActivity {
         cal.set(Calendar.HOUR_OF_DAY, 0);
         cal.set(Calendar.MINUTE, 0);
         cal.set(Calendar.SECOND, 0);
-
+        cal.set(Calendar.DAY_OF_MONTH, 1);
         // Retrieve a PendingIntent that will perform a broadcast
         Intent alarmIntent = new Intent(context, MoodAlarmReceiver.class);
         mPendingIntent = PendingIntent.getBroadcast(context, 0, alarmIntent, 0);
