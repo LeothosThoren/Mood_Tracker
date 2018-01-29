@@ -43,9 +43,9 @@ public class MoodAlarmReceiver extends BroadcastReceiver {
                     R.drawable.ic_comment_black_48px,
                     "date"
             ));
-            //Here we call the saveData method include in the MoodDataStorage class
-            MoodDataStorage.saveData(context);
         }
+        //Here we call the saveData method include in the MoodDataStorage class
+        MoodDataStorage.saveData(context);
         resetMoodEachDay();
     }
 

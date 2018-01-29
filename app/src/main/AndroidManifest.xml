@@ -21,7 +21,8 @@
         <receiver
             android:name=".model.MoodAlarmReceiver"
             android:enabled="true"
-            android:exported="true"></receiver>
+            android:exported="true">
+        </receiver>
     </application>
 
 </manifest>

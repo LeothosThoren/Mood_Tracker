@@ -25,7 +25,7 @@ import static com.leothosthoren.moodtracker.view.MoodAdapter.NUMBER_ITEM;
 public class HistoryActivity extends AppCompatActivity {
 
     //switch to true if you want to enable the developer/debug mode
-    private final boolean DEV_MODE = false;
+    private final boolean DEV_MODE = true;
 
     private RecyclerView mRecyclerView;
     private MoodAdapter mAdapter;

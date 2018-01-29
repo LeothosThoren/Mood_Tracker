@@ -29,7 +29,8 @@
         <receiver
             android:name="com.leothosthoren.moodtracker.model.MoodAlarmReceiver"
             android:enabled="true"
-            android:exported="true" />
+            android:exported="true" >
+        </receiver>
 
         <meta-data
             android:name="android.support.VERSION"

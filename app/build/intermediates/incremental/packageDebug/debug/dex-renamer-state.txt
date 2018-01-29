@@ -1,19 +1,4 @@
-#Thu Jan 25 09:53:18 CET 2018
-path.1=classes.dex
+#Sat Jan 27 20:46:43 CET 2018
+base.0=D\:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\171
 path.0=classes.dex
-renamed.5=classes6.dex
-renamed.4=classes5.dex
-renamed.3=classes4.dex
-renamed.2=classes3.dex
-renamed.1=classes2.dex
 renamed.0=classes.dex
-base.5=D\:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\166
-base.4=D\:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\168
-base.3=D\:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\165
-base.2=D\:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\167
-base.1=D\:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\164
-base.0=D\:\\_MyProjects\\MobileAppDev\\MoodTracker\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\169
-path.5=classes.dex
-path.4=classes.dex
-path.3=classes.dex
-path.2=classes.dex
