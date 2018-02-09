@@ -24,11 +24,10 @@ import static com.leothosthoren.moodtracker.view.MoodAdapter.NUMBER_ITEM;
 
 public class HistoryActivity extends AppCompatActivity {
 
+    public static MoodAdapter mAdapter;
     //switch to true if you want to enable the developer/debug mode
-    private final boolean DEV_MODE = true;
-
+    private final boolean DEV_MODE = false;
     private RecyclerView mRecyclerView;
-    private MoodAdapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
     private Button btnDelete;
     private Button btnSave;
@@ -49,8 +48,8 @@ public class HistoryActivity extends AppCompatActivity {
 
     //Button for testing shared preferences saving and delete not needed in the app
     public void setButton() {
-         btnSave = (Button) findViewById(R.id.Btn_save);
-         btnDelete = (Button) findViewById(R.id.Btn_delete);
+        btnSave = (Button) findViewById(R.id.Btn_save);
+        btnDelete = (Button) findViewById(R.id.Btn_delete);
 
         if (!DEV_MODE) {
             btnSave.setVisibility(View.GONE);
@@ -121,7 +120,7 @@ public class HistoryActivity extends AppCompatActivity {
     * This method handle the construction of an adaptive layout
     * Two classes are called whenever this methods is used
     * */
-    private void buildRecyclerView() {
+    public void buildRecyclerView() {
         mRecyclerView = findViewById(R.id.recyclerView);
         mRecyclerView.setHasFixedSize(true);
 

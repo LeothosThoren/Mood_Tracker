@@ -20,6 +20,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 import com.leothosthoren.moodtracker.R;
 import com.leothosthoren.moodtracker.model.MoodAlarmReceiver;
@@ -40,13 +41,11 @@ public class MainActivity extends AppCompatActivity {
                     R.drawable.smiley_normal,
                     R.drawable.smiley_happy,
                     R.drawable.smiley_super_happy}};
-
     private static final int SWIPE_MIN_DISTANCE = 130;
     private static final int SWIPE_THRESHOLD_VELOCITY = 200;
-
     public static String comment = "";
     public static int indexMood = 3;
-
+    private final boolean TEST_MODE = true;
     private GestureDetectorCompat mDetector;
     private MediaPlayer mediaPlayer;
     private ImageButton mBtnComment;
@@ -58,7 +57,6 @@ public class MainActivity extends AppCompatActivity {
     private ImageView mArrowUp;
     private ImageView mArrowDown;
     private Animation anim;
-
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
@@ -75,7 +73,11 @@ public class MainActivity extends AppCompatActivity {
 
 
         //The alarm is launched
-        schedulerAlarm(this);
+        if (!TEST_MODE)
+            schedulerAlarm(this);
+        //Test mode for testing AlarmManager
+        if (TEST_MODE)
+            alarmTest(this);
 
         /*
         *@mBtnComments
@@ -174,15 +176,29 @@ public class MainActivity extends AppCompatActivity {
         cal.set(Calendar.HOUR_OF_DAY, 0);
         cal.set(Calendar.MINUTE, 0);
         cal.set(Calendar.SECOND, 0);
-        cal.add(Calendar.DAY_OF_MONTH, 1);
+        cal.add(Calendar.DATE, 1);
 
         // Retrieve a PendingIntent that will perform a broadcast
         Intent alarmIntent = new Intent(context, MoodAlarmReceiver.class);
         mPendingIntent = PendingIntent.getBroadcast(context, 0, alarmIntent, 0);
         mAlarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
         //Above we prepare pending intent and Alarm manager, then the alarm is triggered
-        mAlarmManager.setInexactRepeating(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), AlarmManager.INTERVAL_DAY, mPendingIntent);
+        mAlarmManager.setInexactRepeating(AlarmManager.RTC_WAKEUP,
+                cal.getTimeInMillis(), AlarmManager.INTERVAL_DAY, mPendingIntent);
     }
+
+    private void alarmTest(Context context) {
+        Toast.makeText(this, "Test Alarm Set", Toast.LENGTH_SHORT).show();
+        int interval = 90000;
+        // Retrieve a PendingIntent that will perform a broadcast
+        Intent alarmIntent = new Intent(context, MoodAlarmReceiver.class);
+        mPendingIntent = PendingIntent.getBroadcast(context, 0, alarmIntent, 0);
+        mAlarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
+        //Above we prepare pending intent and Alarm manager, then the alarm is triggered
+        mAlarmManager.setRepeating(AlarmManager.RTC_WAKEUP,
+                System.currentTimeMillis() + interval, interval, mPendingIntent);
+    }
+
 
     /*
     * @verticalTranslate method

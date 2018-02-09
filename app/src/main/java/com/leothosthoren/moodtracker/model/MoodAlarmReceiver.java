@@ -3,8 +3,13 @@ package com.leothosthoren.moodtracker.model;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.widget.Toast;
 
 import com.leothosthoren.moodtracker.R;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
 
 import static com.leothosthoren.moodtracker.controler.MainActivity.LIST_COLOR_IMG;
 import static com.leothosthoren.moodtracker.controler.MainActivity.comment;
@@ -18,8 +23,6 @@ import static com.leothosthoren.moodtracker.view.MoodAdapter.NUMBER_ITEM;
  */
 
 public class MoodAlarmReceiver extends BroadcastReceiver {
-
-
     /*
     * @onReceive method
     * @context param
@@ -29,6 +32,8 @@ public class MoodAlarmReceiver extends BroadcastReceiver {
     * */
     @Override
     public void onReceive(Context context, Intent intent) {
+        MoodDataStorage.loadData(context);
+        Toast.makeText(context, "AR running the : " + showDate(), Toast.LENGTH_LONG).show();
 
         //We check the array size and remove first index when the limit is reached
         if (mListMoodItems.size() == NUMBER_ITEM)
@@ -59,4 +64,12 @@ public class MoodAlarmReceiver extends BroadcastReceiver {
         comment = "";
         indexMood = 3;
     }
+
+    public String showDate() {
+        Date today = new Date();
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss", Locale.FRANCE);
+        return simpleDateFormat.format(today);
+
+    }
+
 }

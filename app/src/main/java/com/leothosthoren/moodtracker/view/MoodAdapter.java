@@ -52,7 +52,7 @@ public class MoodAdapter extends RecyclerView.Adapter<MoodAdapter.ListMoodViewHo
         //Here we inflate the xml layout
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_history, parent, false);
         //Each sub layout height is adapting with the parent (device height) we divide the screen by seven (nbr of day in week)
-        view.getLayoutParams().height = parent.getHeight() / mListMoodItems.size();
+        view.getLayoutParams().height = parent.getHeight() / 7 /*mListMoodItems.size()*/;
         //Initialize a new class wih all the data holding
         ListMoodViewHolder lmvh = new ListMoodViewHolder(view, mListener);
         return lmvh;
